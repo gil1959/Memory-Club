@@ -1,6 +1,41 @@
 import Image from 'next/image';
 import clsx from 'clsx';
 
+const cities = [
+  {
+    id: "toronto",
+    name: "TORONTO",
+    region: "CANADA",
+    accentColor: "#2C5E7A",
+    image: "/canada.png",
+    href: "#places",
+  },
+  {
+    id: "miami",
+    name: "MIAMI",
+    region: "FLORIDA",
+    accentColor: "#B84E34",
+    image: "/florida.png",
+    href: "#places",
+  },
+  {
+    id: "montreal",
+    name: "MONTREAL",
+    region: "QUÉBEC",
+    accentColor: "#1F5257",
+    image: "/montreal.png",
+    href: "#places",
+  },
+  {
+    id: "new-york",
+    name: "NEW YORK",
+    region: "NEW YORK",
+    accentColor: "#A2412B",
+    image: "/newyork.png",
+    href: "#places",
+  },
+];
+
 export default function VenuesStory() {
   return (
     <section
@@ -8,9 +43,10 @@ export default function VenuesStory() {
       className={clsx('relative', 'w-full', 'overflow-hidden')}
       style={{
         backgroundImage: "url('/bg3.png')",
-        backgroundSize: "100% 115%",
-        backgroundPosition: "bottom",
+        backgroundSize: "100% auto",
+        backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
+        backgroundColor: "#EDE4D3",
       }}
     >
       <div className={clsx('absolute', 'top-0', 'left-0', 'w-full', 'overflow-hidden', 'pointer-events-none')} style={{ height: '8px' }}>
@@ -130,67 +166,160 @@ export default function VenuesStory() {
           </div>
         </div>
 
-        <div className={clsx('mt-8', 'md:mt-12', 'mb-12', 'md:mb-20', 'flex', 'flex-col', 'lg:grid', 'lg:grid-cols-12', 'gap-10', 'lg:gap-12', 'items-center')} data-aos="fade-up" data-aos-duration="1200">
+        {/* FIND A MEMORY CLUB NEAR YOU - 4 City Cards */}
+        <div id="locations" className="mt-14 md:mt-20 mb-8 md:mb-14 scroll-mt-24">
           
-          <div className={clsx('lg:col-span-4', 'flex', 'justify-center', 'lg:justify-start')}>
-            <div className={clsx('relative', 'rotate-[-4deg]')}>
-              <div className={clsx('absolute', '-top-4', 'left-1/2', '-translate-x-1/2', 'w-24', 'md:w-32', 'h-6', 'md:h-8', 'bg-tape', 'rotate-[-2deg]', 'z-10')} />
-              <div className={clsx('w-[240px]', 'md:w-[320px]')}>
-                {/* To change the 'Our Story' polaroid image, update the 'src' attribute below. */}
-                <Image
-                  src="/img1section5.png"
-                  alt="Our Story"
-                  width={320}
-                  height={400}
-                  className={clsx('w-full', 'h-auto', 'rounded-sm')}
-                />
+          {/* Section Header with Horizontal Rule */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 md:mb-8" data-aos="fade-up" data-aos-duration="1000">
+            <div className="flex items-center gap-4 flex-1">
+              <h2
+                className="font-playfair text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-[#1A1A1A] shrink-0"
+              >
+                Find a Memory Club Near You
+              </h2>
+              <div className="hidden sm:block flex-grow border-t border-[#1A1A1A]/30" />
+            </div>
+            <span className="font-inter text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#1A1A1A]/60 font-semibold shrink-0">
+              More Cities Coming Soon.
+            </span>
+          </div>
+
+          {/* 4 Vintage Postcard Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+            {cities.map((city, index) => (
+              <div
+                key={city.id}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={index * 120}
+                className="group bg-[#FAF6EE] border border-[#2C2520]/25 rounded-[3px] shadow-[0_4px_16px_rgba(44,37,32,0.08)] p-2.5 sm:p-3 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_24px_rgba(44,37,32,0.14)] cursor-pointer relative"
+              >
+                {/* Photo with Stamp overlay */}
+                <div className="relative w-full aspect-[4/3] rounded-[1px] overflow-hidden border border-[#2C2520]/15 shadow-inner mb-2.5">
+                  <Image
+                    src={city.image}
+                    alt={`${city.name} ${city.region}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  
+                  {/* MC Stamp watermark on top right of the photo */}
+                  <div
+                    className="absolute top-2 right-2 w-9 h-9 md:w-10 md:h-10 shrink-0 rotate-[6deg] opacity-75 group-hover:opacity-100 transition-opacity pointer-events-none drop-shadow-sm"
+                    style={{ color: city.accentColor }}
+                  >
+                    <svg viewBox="0 0 100 100" className="w-full h-full">
+                      <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="5,2" opacity="0.85" />
+                      <circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" strokeWidth="1.2" opacity="0.85" />
+                      <text x="50" y="28" textAnchor="middle" fill="currentColor" fontSize="8.5" fontFamily="'Inter', sans-serif" fontWeight="600" letterSpacing="2.5">MEMORY CLUB</text>
+                      <text x="50" y="58" textAnchor="middle" fill="currentColor" fontSize="24" fontFamily="'Playfair Display', serif" fontWeight="900" fontStyle="italic">MC</text>
+                      <text x="50" y="78" textAnchor="middle" fill="currentColor" fontSize="7" fontFamily="'Inter', sans-serif" fontWeight="600" letterSpacing="1.5">EST. 2018</text>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Card Bottom CTA */}
+                <div className="pt-2 pb-1 flex items-center justify-center border-t border-[#2C2520]/10">
+                  <span className="font-inter text-[11px] md:text-xs font-semibold tracking-[0.18em] uppercase text-[#1A1A1A]/80 group-hover:text-[#1A1A1A] flex items-center gap-1.5 transition-colors">
+                    View Locations
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 font-bold">
+                      →
+                    </span>
+                  </span>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className={clsx('lg:col-span-6', 'flex', 'flex-col', 'gap-6', 'text-[#131111]')}>
-            <h2 
-              className={clsx('font-playfair', 'text-xl', 'md:text-2xl', 'uppercase', 'tracking-wide', 'border-b', 'border-[#131111]/30', 'pb-1', 'inline-block', 'self-start')}
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              OUR STORY
-            </h2>
-            <h3 
-              className={clsx('font-playfair', 'text-2xl', 'md:text-3xl', 'font-bold', 'uppercase', 'tracking-wide', 'leading-snug')}
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="150"
-            >
-              THE WORLD NEEDS MORE REMEMBERED MEMORIES.
-            </h3>
-            <div className={clsx('flex', 'flex-col', 'gap-4', 'font-inter', 'text-sm', 'md:text-base', 'text-[#131111]/80', 'leading-relaxed')}>
-              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                Life moves fast. Hold onto what matters.
-              </p>
-              <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
-                Not every night changes your life. But some do stay with you.
-                <br />
-                We make space for those moments so they don't disappear as quickly as they arrive.
-              </p>
-            </div>
-          </div>
-
-          <div className={clsx('lg:col-span-2', 'flex', 'justify-center', 'lg:justify-end')}>
-            <div className={clsx('w-24', 'md:w-32')}>
-              {/* To change the memory club stamp image, update the 'src' attribute below. */}
-              <Image
-                src="/mc.png"
-                alt="Memory Club Stamp"
-                width={150}
-                height={150}
-                className={clsx('w-full', 'h-auto', 'opacity-80')}
-              />
-            </div>
+            ))}
           </div>
 
         </div>
 
+      </div>
+
+      {/* Quote Strip: Some moments are meant to outlive your camera roll */}
+      <div
+        id="story"
+        className="relative w-full overflow-hidden border-t border-[#2C2520]/15"
+        style={{
+          backgroundColor: "#E2D5C3",
+        }}
+      >
+        {/* Graph paper grid pattern on right side */}
+        <div
+          className="absolute right-0 top-0 bottom-0 w-1/3 pointer-events-none opacity-30"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(44,37,32,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(44,37,32,0.12) 1px, transparent 1px)",
+            backgroundSize: "16px 16px",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 sm:py-5 md:py-6 flex items-center justify-between relative z-10 gap-3 sm:gap-4">
+          {/* Left: Polaroid photo with tape */}
+          <div className="shrink-0 relative -rotate-3 hover:rotate-0 transition-transform duration-300">
+            <div className="w-16 sm:w-20 md:w-24 lg:w-28 drop-shadow-md">
+              <Image
+                src="/img1section5.png"
+                alt="Moments"
+                width={180}
+                height={200}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Center: Heart icon + Quote with Red Sketched Underline */}
+          <div className="flex-1 flex flex-col items-center justify-center text-center px-2 sm:px-6">
+            <div className="mb-1 text-[#2C2520]/80">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="inline-block"
+              >
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </div>
+
+            <p className="font-playfair text-xs sm:text-sm md:text-base lg:text-[17px] text-[#2C2520] tracking-wide font-normal">
+              Some moments are meant to{" "}
+              <span className="relative inline-block whitespace-nowrap">
+                outlive your camera roll.
+                <svg
+                  className="absolute -bottom-1 left-0 w-full h-2.5 pointer-events-none"
+                  viewBox="0 0 200 8"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M2,5 Q50,2 100,5 T198,4"
+                    fill="none"
+                    stroke="#B5543E"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    opacity="0.85"
+                  />
+                </svg>
+              </span>
+            </p>
+          </div>
+
+          {/* Right: Memory Club stamp watermark */}
+          <div className="shrink-0 relative">
+            <div className="w-16 sm:w-20 md:w-24 opacity-25 rotate-12">
+              <Image
+                src="/mc.png"
+                alt="Memory Club Stamp"
+                width={120}
+                height={120}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

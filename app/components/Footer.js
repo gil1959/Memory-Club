@@ -36,10 +36,10 @@ export default function Footer() {
                 Explore
               </h4>
               <div className="flex flex-col gap-2">
-                <a href="#places" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
+                <a href="#locations" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Locations
                 </a>
-                <a href="#venues-story" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] hover:scale-105 origin-left transition-all duration-300 uppercase tracking-widest">
+                <a href="#story" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] hover:scale-105 origin-left transition-all duration-300 uppercase tracking-widest">
                   Our Story
                 </a>
                 <a href="#venues" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">

@@ -14,10 +14,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Locations", href: "#places" },
-    { label: "Our Story", href: "#venues-story" },
-    { label: "Partner With Us", href: "#contact" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Home", href: "/" },
+    { label: "Locations", href: "#locations" },
+    { label: "Our Story", href: "#story" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -65,10 +64,10 @@ export default function Navbar() {
         {/* CTA Button - same style as hero */}
         <div className="hidden lg:block">
           <a
-            href="#places"
+            href="#contact"
             className="inline-flex btn-find-locations"
           >
-            Find Locations
+            Partner With Us
           </a>
         </div>
 
@@ -117,11 +116,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#places"
+            href="#contact"
             onClick={() => setMobileOpen(false)}
             className="mt-2 btn-find-locations"
           >
-            Find Locations
+            Partner With Us
           </a>
         </div>
       </div>

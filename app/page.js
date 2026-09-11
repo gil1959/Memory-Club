@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ExperiencesPlaces from "./components/ExperiencesPlaces";
 import VenuesStory from "./components/VenuesStory";
-import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
         <Hero />
         <ExperiencesPlaces />
         <VenuesStory />
-        <FAQ />
       </main>
       <Footer />
     </>
