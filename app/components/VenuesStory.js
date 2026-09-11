@@ -9,6 +9,7 @@ const cities = [
     accentColor: "#2C5E7A",
     image: "/canada.png",
     href: "#places",
+    objectPosition: "center",
   },
   {
     id: "miami",
@@ -17,6 +18,7 @@ const cities = [
     accentColor: "#B84E34",
     image: "/florida.png",
     href: "#places",
+    objectPosition: "center",
   },
   {
     id: "montreal",
@@ -25,6 +27,7 @@ const cities = [
     accentColor: "#1F5257",
     image: "/montreal.png",
     href: "#places",
+    objectPosition: "center 12px",
   },
   {
     id: "new-york",
@@ -33,6 +36,7 @@ const cities = [
     accentColor: "#A2412B",
     image: "/newyork.png",
     href: "#places",
+    objectPosition: "center 12px",
   },
 ];
 
@@ -40,24 +44,29 @@ export default function VenuesStory() {
   return (
     <section
       id="venues-story"
-      className={clsx('relative', 'w-full', 'overflow-hidden')}
+      className={clsx('relative', 'w-full', 'z-20')}
       style={{
-        backgroundImage: "url('/bg3.png')",
-        backgroundSize: "100% auto",
-        backgroundPosition: "top center",
-        backgroundRepeat: "no-repeat",
         backgroundColor: "#EDE4D3",
       }}
     >
-      <div className={clsx('absolute', 'top-0', 'left-0', 'w-full', 'overflow-hidden', 'pointer-events-none')} style={{ height: '8px' }}>
-        <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1000 8">
-          <path d="M0,4 Q50,2 100,4 T200,4 T300,5 T400,3 T500,4 T600,4 T700,5 T800,3 T900,4 T1000,4" fill="none" stroke="#EAE0D5" strokeWidth="1" strokeOpacity="0.2" vectorEffect="non-scaling-stroke" />
-          <path d="M0,5 Q75,5 150,3 T300,4 T450,6 T600,3 T750,5 T900,3 T1000,5" fill="none" stroke="#EAE0D5" strokeWidth="1" strokeOpacity="0.2" vectorEffect="non-scaling-stroke" />
-          <path d="M0,3 Q100,5 200,3 T400,5 T600,4 T800,5 T1000,3" fill="none" stroke="#EAE0D5" strokeWidth="0.8" strokeOpacity="0.2" vectorEffect="non-scaling-stroke" />
-          <path d="M0,4 L20,3 L50,5 L80,4 L120,5 L150,3 L200,4 L250,5 L280,3 L320,4 L400,5 L450,3 L500,4 L550,5 L600,3 L650,4 L700,5 L750,3 L800,4 L850,5 L900,3 L950,4 L1000,4" fill="none" stroke="#EAE0D5" strokeWidth="0.5" strokeOpacity="0.3" vectorEffect="non-scaling-stroke" />
-        </svg>
-      </div>
-      <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'pt-2', 'lg:pt-4', 'pb-8', 'lg:pb-12')}>
+      <div 
+        className={clsx('relative', 'w-full', 'pb-16', 'md:pb-90')}
+        style={{
+          backgroundImage: "url('/bg3.png')",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className={clsx('absolute', 'top-0', 'left-0', 'w-full', 'overflow-hidden', 'pointer-events-none')} style={{ height: '8px' }}>
+          <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1000 8">
+            <path d="M0,4 Q50,2 100,4 T200,4 T300,5 T400,3 T500,4 T600,4 T700,5 T800,3 T900,4 T1000,4" fill="none" stroke="#EAE0D5" strokeWidth="1" strokeOpacity="0.2" vectorEffect="non-scaling-stroke" />
+            <path d="M0,5 Q75,5 150,3 T300,4 T450,6 T600,3 T750,5 T900,3 T1000,5" fill="none" stroke="#EAE0D5" strokeWidth="1" strokeOpacity="0.2" vectorEffect="non-scaling-stroke" />
+            <path d="M0,3 Q100,5 200,3 T400,5 T600,4 T800,5 T1000,3" fill="none" stroke="#EAE0D5" strokeWidth="0.8" strokeOpacity="0.2" vectorEffect="non-scaling-stroke" />
+            <path d="M0,4 L20,3 L50,5 L80,4 L120,5 L150,3 L200,4 L250,5 L280,3 L320,4 L400,5 L450,3 L500,4 L550,5 L600,3 L650,4 L700,5 L750,3 L800,4 L850,5 L900,3 L950,4 L1000,4" fill="none" stroke="#EAE0D5" strokeWidth="0.5" strokeOpacity="0.3" vectorEffect="non-scaling-stroke" />
+          </svg>
+        </div>
+        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'pt-2', 'lg:pt-4')}>
         
         <div className={clsx('flex', 'flex-col', '-mt-2', 'lg:-mt-4', 'relative', 'z-10')}>
           
@@ -165,65 +174,75 @@ export default function VenuesStory() {
             </span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'relative', 'z-20', '-mt-16', 'md:-mt-87')}>
 
         {/* FIND A MEMORY CLUB NEAR YOU - 4 City Cards */}
-        <div id="locations" className="mt-14 md:mt-20 mb-8 md:mb-14 scroll-mt-24">
+        <div id="locations" className={clsx('mb-8', 'md:mb-14', 'scroll-mt-24')}>
           
           {/* Section Header with Horizontal Rule */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 md:mb-8" data-aos="fade-up" data-aos-duration="1000">
-            <div className="flex items-center gap-4 flex-1">
+          <div className={clsx('flex', 'flex-col', 'sm:flex-row', 'sm:items-center', 'justify-between', 'gap-3', 'mb-6', 'md:mb-8')} data-aos="fade-up" data-aos-duration="1000">
+            <div className={clsx('flex', 'items-center', 'gap-4', 'flex-1')}>
               <h2
-                className="font-playfair text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-[#1A1A1A] shrink-0"
+                className={clsx('font-playfair', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'font-bold', 'uppercase', 'tracking-tight', 'text-[#1A1A1A]', 'shrink-0', 'underline', 'underline-offset-4')}
               >
                 Find a Memory Club Near You
               </h2>
-              <div className="hidden sm:block flex-grow border-t border-[#1A1A1A]/30" />
+              <div className={clsx('hidden', 'sm:block', 'flex-grow', 'border-t', 'border-[#1A1A1A]/30')} />
             </div>
-            <span className="font-inter text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#1A1A1A]/60 font-semibold shrink-0">
+            <span className={clsx('font-inter', 'text-[10px]', 'md:text-xs', 'uppercase', 'tracking-[0.2em]', 'text-[#1A1A1A]/60', 'font-semibold', 'shrink-0')}>
               More Cities Coming Soon.
             </span>
           </div>
 
           {/* 4 Vintage Postcard Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          <div className={clsx('grid', 'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-4', 'gap-4', 'lg:gap-5')}>
             {cities.map((city, index) => (
               <div
                 key={city.id}
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay={index * 120}
-                className="group bg-[#FAF6EE] border border-[#2C2520]/25 rounded-[3px] shadow-[0_4px_16px_rgba(44,37,32,0.08)] p-2.5 sm:p-3 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_24px_rgba(44,37,32,0.14)] cursor-pointer relative"
+                className={clsx('group', 'relative', 'w-full', 'aspect-[4/3]', 'cursor-pointer', 'transition-transform', 'duration-300', 'hover:-translate-y-1.5')}
               >
-                {/* Photo with Stamp overlay */}
-                <div className="relative w-full aspect-[4/3] rounded-[1px] overflow-hidden border border-[#2C2520]/15 shadow-inner mb-2.5">
-                  <Image
-                    src={city.image}
-                    alt={`${city.name} ${city.region}`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  
-                  {/* MC Stamp watermark on top right of the photo */}
-                  <div
-                    className="absolute top-2 right-2 w-9 h-9 md:w-10 md:h-10 shrink-0 rotate-[6deg] opacity-75 group-hover:opacity-100 transition-opacity pointer-events-none drop-shadow-sm"
-                    style={{ color: city.accentColor }}
-                  >
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="5,2" opacity="0.85" />
-                      <circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" strokeWidth="1.2" opacity="0.85" />
-                      <text x="50" y="28" textAnchor="middle" fill="currentColor" fontSize="8.5" fontFamily="'Inter', sans-serif" fontWeight="600" letterSpacing="2.5">MEMORY CLUB</text>
-                      <text x="50" y="58" textAnchor="middle" fill="currentColor" fontSize="24" fontFamily="'Playfair Display', serif" fontWeight="900" fontStyle="italic">MC</text>
-                      <text x="50" y="78" textAnchor="middle" fill="currentColor" fontSize="7" fontFamily="'Inter', sans-serif" fontWeight="600" letterSpacing="1.5">EST. 2018</text>
-                    </svg>
-                  </div>
-                </div>
+                {/* 1. Photo (Behind the border) */}
+                <Image
+                  src={city.image}
+                  alt={`${city.name} ${city.region}`}
+                  fill
+                  className={clsx('object-cover', 'group-hover:scale-105', 'transition-transform', 'duration-500')}
+                  style={{ 
+                    objectPosition: city.objectPosition || 'center',
+                  }}
+                />
+                
+                {/* 2. Border overlay (The frame) */}
+                <img 
+                  src="/borderimg.png" 
+                  alt="frame" 
+                  className={clsx('absolute', 'inset-0', 'w-full', 'h-full', 'object-fill', 'pointer-events-none', 'z-10', 'group-hover:scale-105', 'transition-transform', 'duration-500')} 
+                />
 
-                {/* Card Bottom CTA */}
-                <div className="pt-2 pb-1 flex items-center justify-center border-t border-[#2C2520]/10">
-                  <span className="font-inter text-[11px] md:text-xs font-semibold tracking-[0.18em] uppercase text-[#1A1A1A]/80 group-hover:text-[#1A1A1A] flex items-center gap-1.5 transition-colors">
-                    View Locations
-                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 font-bold">
-                      →
+                {/* 3. Stamp (Using mc.png as requested) */}
+                <img
+                  src="/mc.png"
+                  alt="MC Stamp"
+                  className={clsx('absolute', 'top-4', 'right-4', 'w-11', 'h-11', 'md:w-12', 'md:h-12', 'shrink-0', 'rotate-[15deg]', 'opacity-60', 'group-hover:opacity-90', 'transition-opacity', 'pointer-events-none', 'z-20')}
+                />
+
+                {/* 4. Text on top of the bottom border area */}
+                <div className={clsx('absolute', 'bottom-[6%]', 'left-0', 'w-full', 'flex', 'items-center', 'justify-center', 'z-20', 'pointer-events-none')}>
+                  <span 
+                    className={clsx('text-[11px]', 'sm:text-[12px]', 'md:text-[13px]', 'tracking-[0.1em]', 'uppercase', 'text-[#2C2520]', 'group-hover:text-black', 'flex', 'items-center', 'gap-1.5', 'transition-colors')} 
+                    style={{ fontFamily: "'Courier New', Courier, monospace", fontWeight: 600 }}
+                  >
+                    VIEW LOCATIONS
+                    <span className={clsx('inline-block', 'transition-transform', 'duration-300', 'group-hover:translate-x-2', 'ml-1')}>
+                      <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6H23M23 6L18 1M23 6L18 11" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </span>
                   </span>
                 </div>
@@ -238,14 +257,17 @@ export default function VenuesStory() {
       {/* Quote Strip: Some moments are meant to outlive your camera roll */}
       <div
         id="story"
-        className="relative w-full overflow-hidden border-t border-[#2C2520]/15"
+        className={clsx('relative', 'w-full', 'z-20')}
         style={{
-          backgroundColor: "#E2D5C3",
+          backgroundImage: "url('/bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* Graph paper grid pattern on right side */}
         <div
-          className="absolute right-0 top-0 bottom-0 w-1/3 pointer-events-none opacity-30"
+          className={clsx('absolute', 'right-0', 'top-0', 'bottom-0', 'w-1/3', 'pointer-events-none', 'opacity-30')}
           style={{
             backgroundImage:
               "linear-gradient(rgba(44,37,32,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(44,37,32,0.12) 1px, transparent 1px)",
@@ -253,69 +275,67 @@ export default function VenuesStory() {
           }}
         />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 sm:py-5 md:py-6 flex items-center justify-between relative z-10 gap-3 sm:gap-4">
+        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'py-1', 'sm:py-1.5', 'md:py-2', 'flex', 'items-center', 'justify-center', 'relative', 'z-10', 'gap-6', 'sm:gap-12', 'md:gap-20', 'lg:gap-32')}>
           {/* Left: Polaroid photo with tape */}
-          <div className="shrink-0 relative -rotate-3 hover:rotate-0 transition-transform duration-300">
-            <div className="w-16 sm:w-20 md:w-24 lg:w-28 drop-shadow-md">
+          <div className={clsx('shrink-0', '-translate-y-2', 'relative', '-rotate-3', 'hover:rotate-0', 'transition-transform', 'duration-300')}>
+            <div className={clsx('w-16', 'sm:w-20', 'md:w-28', 'lg:w-28', 'drop-shadow-md')}>
               <Image
                 src="/img1section5.png"
                 alt="Moments"
                 width={180}
                 height={200}
-                className="w-full h-auto"
+                className={clsx('w-full', 'h-auto')}
               />
             </div>
           </div>
 
           {/* Center: Heart icon + Quote with Red Sketched Underline */}
-          <div className="flex-1 flex flex-col items-center justify-center text-center px-2 sm:px-6">
-            <div className="mb-1 text-[#2C2520]/80">
+          <div className={clsx('flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'px-2', 'sm:px-6', 'shrink-0')}>
+            <div className={clsx('mb-1.5', 'text-[#2C2520]')}>
               <svg
-                width="16"
-                height="16"
+                width="15"
+                height="15"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.6"
+                strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="inline-block"
+                className={clsx('inline-block', 'opacity-80', '-rotate-3')}
               >
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                <path d="M11.5 20.5C5 15 3 11 3 7.5a4.5 4.5 0 0 1 8.5-2.5L12 6l.5-1a4.5 4.5 0 0 1 8.5 2.5c0 3.5-2 7.5-8.5 13" />
               </svg>
             </div>
 
-            <p className="font-playfair text-xs sm:text-sm md:text-base lg:text-[17px] text-[#2C2520] tracking-wide font-normal">
-              Some moments are meant to{" "}
-              <span className="relative inline-block whitespace-nowrap">
-                outlive your camera roll.
-                <svg
-                  className="absolute -bottom-1 left-0 w-full h-2.5 pointer-events-none"
-                  viewBox="0 0 200 8"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M2,5 Q50,2 100,5 T198,4"
-                    fill="none"
-                    stroke="#B5543E"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    opacity="0.85"
-                  />
-                </svg>
-              </span>
-            </p>
+            <div className={clsx('relative', 'inline-block')}>
+              <p className={clsx('font-playfair', 'text-[11px]', 'sm:text-xs', 'md:text-sm', 'lg:text-[14px]', 'text-[#2C2520]', 'tracking-wide', 'font-normal')}>
+                Some moments are meant to outlive your camera roll.
+              </p>
+              <svg
+                className={clsx('absolute', '-bottom-1.5', 'left-1/2', '-translate-x-1/2', 'w-[75%]', 'h-2', 'pointer-events-none')}
+                viewBox="0 0 200 10"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M4,8 Q100,1 196,8"
+                  fill="none"
+                  stroke="#C14A36"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
           </div>
 
           {/* Right: Memory Club stamp watermark */}
-          <div className="shrink-0 relative">
-            <div className="w-16 sm:w-20 md:w-24 opacity-25 rotate-12">
+          <div className={clsx('shrink-0', 'relative', 'translate-y-4', 'md:translate-y-8', 'z-[99]')}>
+            <div className={clsx('w-14', 'sm:w-16', 'md:w-24', 'rotate-12')}>
               <Image
                 src="/mc.png"
                 alt="Memory Club Stamp"
                 width={120}
                 height={120}
-                className="w-full h-auto"
+                className={clsx('w-full', 'h-auto', 'invert', 'brightness-0', 'sepia', 'saturate-150', 'opacity-70', 'drop-shadow-md')}
               />
             </div>
           </div>

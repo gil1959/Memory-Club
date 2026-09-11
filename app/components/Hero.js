@@ -22,7 +22,7 @@ export default function Hero() {
             <div className={clsx('flex', 'flex-wrap', 'gap-4', 'mt-3', 'items-center')}>
               {/* To update the redirect links for these buttons, modify the 'href' attribute. */}
               <a
-                href="#places"
+                href="/locations"
                 className="btn-find-locations"
                 style={{ padding: "12px 24px", fontSize: "0.8rem" }}
               >

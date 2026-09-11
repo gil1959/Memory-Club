@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -15,9 +17,9 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Locations", href: "#locations" },
-    { label: "Our Story", href: "#story" },
-    { label: "Contact", href: "#contact" },
+    { label: "Locations", href: "/locations" },
+    { label: "Our Story", href: "/#story" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -50,21 +52,28 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-sm font-inter font-medium tracking-wide uppercase text-text-dark/80 hover:text-text-dark hover:scale-105 transition-all duration-300"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                className={`text-sm font-inter font-medium tracking-wide uppercase transition-all duration-300 ${
+                  isActive 
+                    ? "text-[#1A1A1A] underline underline-offset-[6px] decoration-[1.5px]" 
+                    : "text-text-dark/80 hover:text-text-dark hover:scale-105"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
 
         {/* CTA Button - same style as hero */}
         <div className="hidden lg:block">
           <a
-            href="#contact"
+            href="/partnerwithus"
             className="inline-flex btn-find-locations"
           >
             Partner With Us
@@ -105,18 +114,25 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col items-center gap-4 px-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-sm font-inter font-medium tracking-wide uppercase text-text-dark/80 hover:text-text-dark"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`text-sm font-inter font-medium tracking-wide uppercase ${
+                  isActive
+                    ? "text-[#1A1A1A] underline underline-offset-[6px] decoration-[1.5px]"
+                    : "text-text-dark/80 hover:text-text-dark"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
           <a
-            href="#contact"
+            href="/partnerwithus"
             onClick={() => setMobileOpen(false)}
             className="mt-2 btn-find-locations"
           >

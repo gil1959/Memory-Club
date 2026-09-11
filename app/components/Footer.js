@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="w-full flex flex-col">
+    <footer id="contact" className="w-full flex flex-col relative z-0">
       <div 
-        className="w-full pt-8 lg:pt-10 pb-3 text-[#EAE0D5] flex flex-col"
+        className="w-full pt-6 lg:pt-8 pb-2 text-[#EAE0D5] flex flex-col"
         style={{
           backgroundImage: "url('/bgfooter.png')",
           backgroundSize: "cover",
@@ -13,14 +13,14 @@ export default function Footer() {
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 w-full flex-1 flex flex-col justify-center">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10 lg:gap-8 mb-8">
+          <div className="flex flex-col lg:flex-row lg:items-start justify-center gap-12 lg:gap-20 xl:gap-28 mb-6 lg:mb-8 w-full">
             
-            <div className="flex flex-col gap-2 lg:w-1/4">
+            <div className="flex flex-col gap-2 lg:w-auto lg:max-w-[260px] self-center shrink-0">
               <div className="flex flex-col leading-none items-center lg:items-start w-fit mx-auto lg:mx-0">
-                <span className="font-playfair text-3xl font-bold tracking-wide uppercase">
+                <span className="font-playfair text-2xl md:text-3xl font-bold tracking-wide uppercase">
                   Memory <span className="font-playfair italic font-normal normal-case">Club</span>
                 </span>
-                <span className="text-[9px] md:text-[10px] tracking-[0.3em] font-inter uppercase mt-1 text-[#EAE0D5] text-center w-full">
+                <span className="text-[8px] md:text-[9px] tracking-[0.3em] font-inter uppercase mt-1 text-[#EAE0D5] text-center w-full">
                   Photobooth Co.
                 </span>
               </div>
@@ -31,42 +31,42 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <h4 className="font-inter text-[11px] font-medium uppercase tracking-widest text-[#EAE0D5]">
+            <div className="flex flex-col gap-2 md:gap-3 lg:mt-2">
+              <h4 className="font-inter text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-[#EAE0D5] mb-1">
                 Explore
               </h4>
               <div className="flex flex-col gap-2">
-                <a href="#locations" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
+                <a href="/locations" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Locations
                 </a>
-                <a href="#story" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] hover:scale-105 origin-left transition-all duration-300 uppercase tracking-widest">
+                <a href="/#story" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Our Story
                 </a>
-                <a href="#venues" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
+                <a href="/#venues" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Gallery
                 </a>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <h4 className="font-inter text-[11px] font-medium uppercase tracking-widest text-[#EAE0D5]">
+            <div className="flex flex-col gap-2 md:gap-3 lg:mt-2">
+              <h4 className="font-inter text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-[#EAE0D5] mb-1">
                 Support
               </h4>
               <div className="flex flex-col gap-2">
-                <a href="#contact" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
+                <a href="/contact" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Contact Us
                 </a>
-                <a href="#" className="font-inter text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
+                <a href="#" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Terms & Privacy
                 </a>
               </div>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <h4 className="font-inter text-[11px] font-medium uppercase tracking-widest text-[#EAE0D5]">
+            <div className="flex flex-col gap-2 md:gap-3 lg:mt-2">
+              <h4 className="font-inter text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-[#EAE0D5] mb-1">
                 Follow Along
               </h4>
-              <p className="font-inter text-[11px] text-[#EAE0D5]/70 uppercase tracking-widest">
+              <p className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 uppercase tracking-widest">
                 @memoryclub.co
               </p>
               <div className="flex gap-4 mt-1 justify-center lg:justify-start">
@@ -83,9 +83,9 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-end lg:pl-10">
+            <div className="flex justify-center lg:justify-end self-center shrink-0">
               <div 
-                className="w-24 md:w-32 opacity-80"
+                className="w-20 md:w-28 opacity-80"
                 style={{ filter: "brightness(0) invert(1)" }}
               >
                 {/* To change the memory club stamp image, update the 'src' attribute below. */}
@@ -102,11 +102,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-full text-center mt-10 lg:mt-14">
-          <p className="font-inter text-[11px] font-medium text-[#EAE0D5]/80 tracking-widest">
-            © 2018 Memory Club. Made to be remembered.
-          </p>
-        </div>
+      </div>
+
+      {/* Black copyright section */}
+      <div className="w-full bg-[#151515] py-6 lg:py-8 text-center">
+        <p className="font-inter text-[10px] md:text-[11px] font-medium text-[#EAE0D5]/70 tracking-widest">
+          © 2018 Memory Club. Made to be remembered.
+        </p>
       </div>
     </footer>
   );
