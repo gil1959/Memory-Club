@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className={clsx('relative', 'min-h-[100svh]', 'md:h-screen', 'bg-cream', 'overflow-hidden', 'pt-28', 'md:pt-20', 'pb-16', 'md:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+    <section className={clsx('relative', 'min-h-[100svh]', 'md:h-screen', 'bg-cream', 'overflow-x-clip', 'pt-28', 'md:pt-20', 'pb-16', 'md:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
       <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'h-full', 'flex', 'md:items-center')}>
         <div className={clsx('w-full', 'relative', 'mt-10', 'md:mt-0')}>
 
