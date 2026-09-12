@@ -29,7 +29,7 @@ export default function Hero() {
                 Find Locations
               </a>
               <a
-                href="#story"
+                href="/ourstory"
                 className={clsx('our-story-btn', 'inline-flex', 'items-center', 'gap-3', 'px-4', 'py-2.5', 'text-[13px]', 'font-inter', 'font-semibold', 'tracking-wider', 'uppercase', 'text-text-dark', 'hover:gap-5', 'transition-all', 'duration-300')}
               >
                 <span className="our-story-text">Our Story</span>

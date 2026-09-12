@@ -39,7 +39,7 @@ export default function Footer() {
                 <a href="/locations" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Locations
                 </a>
-                <a href="/#story" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
+                <a href="/ourstory" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
                   Our Story
                 </a>
                 <a href="/#venues" className="font-inter text-[10px] md:text-[11px] text-[#EAE0D5]/70 hover:text-[#EAE0D5] transition-colors uppercase tracking-widest">
