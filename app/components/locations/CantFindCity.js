@@ -9,7 +9,7 @@ export default function CantFindCity() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [venueType, setVenueType] = useState('');
   
-  const venueOptions = ['Bar', 'Hotel', 'Restaurant', 'Event Space'];
+  const venueOptions = ['Bar', 'Hotel', 'Restaurant', 'Event Space', 'Other'];
 
   return (
     <section className={clsx('w-full', 'bg-cream', 'py-0', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
@@ -130,6 +130,14 @@ export default function CantFindCity() {
                   </div>
                 )}
               </div>
+
+              {/* Other Venue Type Input (Conditionally Rendered) */}
+              {venueType === 'Other' && (
+                <div className={clsx('flex', 'items-center', 'gap-3', 'px-4', 'py-2.5', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                  <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                  <input type="text" placeholder="Please specify venue type" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+                </div>
+              )}
 
               {/* Why this spot Textarea */}
               <div className={clsx('flex', 'gap-3', 'px-4', 'py-2.5', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>

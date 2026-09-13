@@ -18,13 +18,13 @@ export default function OurStory() {
         
         {/* Section 1: We Make Space */}
         <div style={bgStyle} className="w-full">
-          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'lg:gap-20', 'pt-10', 'pb-0', 'md:pt-16', 'md:pb-0', '-mb-16', 'md:-mb-15', 'transform', 'md:-translate-x-6', 'lg:-translate-x-12')}>
-            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-start')} data-aos="fade-right" data-aos-duration="1000">
-              <h1 className={clsx('font-anton', 'text-[3.5rem]', 'md:text-6xl', 'lg:text-[5.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark')}>
+          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'md:gap-34', 'pt-4', 'md:pt-8', 'pb-12', 'md:pb-16', 'transform', 'md:-translate-x-10', 'md:-translate-x-20')}>
+            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-center', 'md:items-start')} data-aos="fade-right" data-aos-duration="1000">
+              <h1 className={clsx('font-anton', 'text-5xl', 'md:text-6xl', 'md:text-[4.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'md:text-left')}>
                 We Make<br/>Space For<br/>Moments<br/>That Stay.
               </h1>
-              <div className={clsx('w-10', 'h-1', 'bg-[#d05c45]', 'mt-6', 'mb-8', 'md:mb-10')}></div>
-              <p className={clsx('font-inter', 'text-[13px]', 'md:text-[14.5px]', 'text-text-dark/85', 'leading-[1.7]', 'md:leading-[1.8]', 'tracking-wide')}>
+              <div className={clsx('w-10', 'h-1', 'bg-[#d05c45]', 'mt-4', 'mb-5', 'mx-auto', 'md:mx-0')}></div>
+              <p className={clsx('font-inter', 'text-[13px]', 'md:text-[14.5px]', 'text-text-dark/85', 'leading-[1.7]', 'md:leading-[1.8]', 'tracking-wide', 'text-center', 'md:text-left')}>
                 In a world that moves fast, we believe<br/>
                 the best moments deserve more<br/>
                 than a screen. Memory Club brings<br/>
@@ -32,42 +32,32 @@ export default function OurStory() {
                 come together—and gives them<br/>
                 something real to take home.
               </p>
-              <div className={clsx('mt-8', 'ml-8')}>
-                <Image 
-                  src="/mc.png" 
-                  alt="MC Stamp" 
-                  width={110} 
-                  height={110} 
-                  className={clsx('opacity-90', 'transition-transform', 'duration-300')}
-                  style={{ transform: "scale(1.1) translateX(280px) translateY(-70px) rotate(-10deg)" }}
-                />
-              </div>
             </div>
             
             <div className={clsx('w-full', 'md:w-auto', 'relative', 'mt-10', 'md:mt-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-              <div className={clsx('relative', 'w-[300px]', 'md:w-[380px]', 'lg:w-[420px]', 'mx-auto', 'md:ml-auto')}>
+              <div className={clsx('relative', 'w-[240px]', 'md:w-[320px]', 'md:w-[360px]', 'mx-auto', 'md:mx-0')}>
                 <Image 
                   src="/img1ourstory.png" 
                   alt="Girls hugging" 
-                  width={420} 
-                  height={520} 
+                  width={360} 
+                  height={450} 
                   className={clsx('w-full', 'h-auto', 'object-cover', 'relative', 'z-10', 'transition-transform', 'duration-300')}
-                  style={{ transform: "scale(1) translateX(0px) translateY(-130px) rotate(0deg)" }}
+                  style={{ transform: "scale(1) translateX(0px) translateY(-40px) rotate(0deg)" }}
                 />
                 
-                <div className={clsx('absolute', 'z-20', 'transition-transform', 'duration-300', 'w-[100px]', 'md:w-[130px]')}
-                     style={{ bottom: "-40px", right: "-30px", transform: "scale(1.1) translateX(0px) translateY(-140px) rotate(10deg)" }}>
+                <div className={clsx('absolute', 'z-20', 'transition-transform', 'duration-300', 'w-[80px]', 'md:w-[100px]')}
+                     style={{ bottom: "0px", right: "-20px", transform: "scale(1.1) translateX(0px) translateY(-60px) rotate(10deg)" }}>
                   <Image 
                     src="/img2ourstory.png" 
                     alt="Photo strip" 
-                    width={130} 
-                    height={450} 
+                    width={100} 
+                    height={350} 
                     className={clsx('w-full', 'h-auto')} 
                   />
                 </div>
 
-                <div className={clsx('absolute', 'z-30', 'font-satisfy', 'text-xl', 'md:text-2xl', 'text-text-dark/90', 'whitespace-nowrap')}
-                     style={{ bottom: "50px", right: "-120px", transform: "rotate(-5deg) translateX(80px) translateY(-100px)" }}>
+                <div className={clsx('absolute', 'z-30', 'font-satisfy', 'text-lg', 'md:text-xl', 'text-text-dark/90', 'whitespace-nowrap')}
+                     style={{ bottom: "50px", right: "-80px", transform: "rotate(-5deg) translateX(100px) translateY(-20px)" }}>
                   <div>good times</div>
                   <div className="ml-6">good people</div>
                   <div className={clsx('text-right', 'mt-1', 'text-base', 'pr-4')}>♡</div>
@@ -81,9 +71,9 @@ export default function OurStory() {
 
         {/* Section 2: A Photo Strip */}
         <div style={bgStyle} className="w-full">
-          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'flex', 'flex-col-reverse', 'md:flex-row', 'items-center', 'justify-center', 'gap-8', 'md:gap-12', 'lg:gap-16', 'py-12', 'md:py-16')}>
+          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col-reverse', 'md:flex-row', 'items-center', 'justify-center', 'gap-8', 'md:gap-12', 'md:gap-16', 'py-12', 'md:py-16')}>
             <div className={clsx('w-full', 'md:w-auto', 'relative', 'flex', 'justify-center', 'md:justify-end')} data-aos="fade-right" data-aos-duration="1200">
-              <div className={clsx('bg-white', 'p-2', 'md:p-3', 'shadow-xl', 'transform', 'rotate-2', 'w-[360px]', 'md:w-[500px]', 'lg:w-[550px]')}>
+              <div className={clsx('bg-white', 'p-2', 'md:p-3', 'shadow-xl', 'transform', 'rotate-2', 'w-[360px]', 'md:w-[500px]', 'md:w-[550px]')}>
                  <Image 
                    src="/img3ourstory.png" 
                    alt="Hand holding strip" 
@@ -94,13 +84,13 @@ export default function OurStory() {
               </div>
             </div>
             
-            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-start')} data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-              <h2 className={clsx('font-anton', 'text-[2.2rem]', 'md:text-[2.8rem]', 'lg:text-[2.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark')}>
-                <span className={clsx('block', 'whitespace-nowrap')}>A PHOTO STRIP</span>
-                <span className={clsx('block', 'whitespace-nowrap')}>CAN HOLD A WHOLE NIGHT.</span>
+            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-center', 'md:items-start')} data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+              <h2 className={clsx('font-anton', 'text-[2.2rem]', 'md:text-[2.8rem]', 'md:text-[2.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'md:text-left')}>
+                <span className={clsx('block', 'md:whitespace-nowrap')}>A PHOTO STRIP</span>
+                <span className={clsx('block', 'md:whitespace-nowrap')}>CAN HOLD A WHOLE NIGHT.</span>
               </h2>
-              <div className={clsx('w-12', 'h-[3px]', 'bg-[#d05c45]', 'mt-5', 'mb-6')}></div>
-              <div className={clsx('font-inter', 'text-[13px]', 'md:text-[14.5px]', 'text-text-dark/85', 'leading-[1.7]', 'md:leading-[1.8]', 'tracking-wide', 'space-y-6')}>
+              <div className={clsx('w-12', 'h-[3px]', 'bg-[#d05c45]', 'mt-5', 'mb-6', 'mx-auto', 'md:mx-0')}></div>
+              <div className={clsx('font-inter', 'text-[13px]', 'md:text-[14.5px]', 'text-text-dark/85', 'leading-[1.7]', 'md:leading-[1.8]', 'tracking-wide', 'space-y-6', 'text-center', 'md:text-left')}>
                 <p>The inside jokes. The dances. The people you came<br/>with—and the ones you just met.</p>
                 <p>Nights like these don't last forever.<br/>But a photo strip does.</p>
                 <p>It's a small thing. But it holds everything you'll want<br/>to remember.</p>
@@ -113,7 +103,7 @@ export default function OurStory() {
 
         {/* Section 3: What We Believe */}
         <div style={bgStyle} className="w-full">
-          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'py-5', 'md:py-10', 'text-center')} data-aos="fade-up" data-aos-duration="1200">
+          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'py-5', 'md:py-10', 'text-center')} data-aos="fade-up" data-aos-duration="1200">
             <h2 className={clsx('font-playfair', 'font-bold', 'text-[2rem]', 'md:text-[2.5rem]', 'tracking-[0.1em]', 'uppercase', 'text-text-dark')}>
               WHAT WE BELIEVE
             </h2>
@@ -186,9 +176,9 @@ export default function OurStory() {
 
         {/* Section 4: Come find us */}
         <div style={bgStyle} className="w-full">
-          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'pt-6', 'pb-12', 'md:pt-10', 'md:pb-14', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'md:gap-16', 'lg:gap-24')}>
+          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'pt-6', 'pb-12', 'md:pt-10', 'md:pb-14', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'md:gap-16', 'md:gap-24')}>
             <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-start')} data-aos="fade-right" data-aos-duration="1200">
-              <h2 className={clsx('font-anton', 'text-[2.2rem]', 'md:text-[2.8rem]', 'lg:text-[3.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark')}>
+              <h2 className={clsx('font-anton', 'text-[2.2rem]', 'md:text-[2.8rem]', 'md:text-[3.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark')}>
                 <span className={clsx('block', 'whitespace-nowrap')}>COME FIND US</span>
                 <span className={clsx('block', 'whitespace-nowrap')}>IN GOOD PLACES.</span>
               </h2>
@@ -205,7 +195,7 @@ export default function OurStory() {
             </div>
             
             <div className={clsx('w-full', 'md:w-auto', 'relative', 'flex', 'justify-center', 'mt-10', 'md:mt-0')} data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-              <div className={clsx('relative', 'w-[320px]', 'md:w-[400px]', 'lg:w-[450px]', 'transform', '-rotate-3')}>
+              <div className={clsx('relative', 'w-[320px]', 'md:w-[400px]', 'md:w-[450px]', 'transform', '-rotate-3')}>
                  <Image 
                    src="/image_3.png" 
                    alt="Paper note" 
@@ -214,13 +204,13 @@ export default function OurStory() {
                    className={clsx('w-full', 'h-auto', 'drop-shadow-md')} 
                  />
                  <div className={clsx('absolute', 'inset-0', 'flex', 'items-center', 'justify-center', 'pt-2', 'md:pt-4', 'pl-4', 'md:pl-6')}>
-                    <p className={clsx('font-courier-prime', 'font-bold', 'text-[22px]', 'md:text-[28px]', 'lg:text-[32px]', 'text-text-dark/80', 'text-left', 'leading-snug', 'w-fit')}>
+                    <p className={clsx('font-courier-prime', 'font-bold', 'text-[22px]', 'md:text-[28px]', 'md:text-[32px]', 'text-text-dark/80', 'text-left', 'leading-snug', 'w-fit')}>
                       Collect<br/>the moments.<br/>Keep them.
                     </p>
                  </div>
-                 <div className={clsx('absolute', '-bottom-6', 'md:-bottom-8', '-right-4', 'md:-right-8', 'w-[100px]', 'md:w-[130px]', 'lg:w-[160px]', 'z-20', 'transform', '-rotate-[8deg]')}>
+                 <div className={clsx('absolute', '-bottom-6', 'md:-bottom-8', '-right-4', 'md:-right-8', 'w-[100px]', 'md:w-[130px]', 'md:w-[160px]', 'z-20', 'transform', '-rotate-[8deg]')}>
                    <Image 
-                     src="/mc.png" 
+                     src="/stamp2.png" 
                      alt="MC Stamp" 
                      width={160} 
                      height={160} 

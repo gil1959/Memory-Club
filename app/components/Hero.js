@@ -3,28 +3,28 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className={clsx('relative', 'min-h-[100svh]', 'md:h-screen', 'bg-cream', 'overflow-x-clip', 'pt-28', 'md:pt-20', 'pb-16', 'md:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
-      <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'lg:px-10', 'h-full', 'flex', 'md:items-center')}>
-        <div className={clsx('w-full', 'relative', 'mt-10', 'md:mt-0')}>
+    <section className={clsx('relative', 'min-[1050px]:min-h-[100svh]', 'min-[1050px]:h-screen', 'bg-cream', 'overflow-x-clip', 'pt-28', 'min-[1050px]:pt-20', 'pb-10', 'min-[1050px]:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+      <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'h-full', 'flex', 'min-[1050px]:items-center')}>
+        <div className={clsx('w-full', 'relative', 'mt-10', 'min-[1050px]:mt-0')}>
 
-          <div className={clsx('flex', 'flex-col', 'gap-4', 'z-10', 'relative', 'lg:max-w-[500px]', 'pl-6', 'md:pl-8', 'lg:pl-16')} data-aos="fade-right" data-aos-duration="1000">
-            <h1 className={clsx('font-anton', 'text-5xl', 'md:text-6xl', 'lg:text-[5.5rem]', 'uppercase', 'leading-[1.1]', 'tracking-wider', 'text-text-dark')}>
+          <div className={clsx('flex', 'flex-col', 'items-center', 'min-[1050px]:items-start', 'gap-5', 'z-10', 'relative', 'min-[1050px]:max-w-[560px]', 'pl-0')} data-aos="fade-right" data-aos-duration="1000">
+            <h1 className={clsx('font-anton', 'text-5xl', 'min-[1050px]:text-7xl', 'min-[1050px]:text-[6.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'min-[1050px]:text-left')}>
               Memories
               <br />
               Made Real.
             </h1>
-            <p className={clsx('font-inter', 'text-[14px]', 'md:text-[15px]', 'text-text-dark/80', 'max-w-[380px]', 'leading-relaxed', 'mt-1')}>
+            <p className={clsx('font-inter', 'text-[15px]', 'min-[1050px]:text-[16px]', 'text-text-dark/80', 'max-w-[420px]', 'leading-relaxed', 'mt-1', 'text-center', 'min-[1050px]:text-left')}>
               Memory Club places handcrafted photo booths in selected bars,
               restaurants, hotels, clubs, and similar venues. Each booth
               captures the real, unfiltered moments that make nights out
               unforgettable.
             </p>
-            <div className={clsx('flex', 'flex-wrap', 'gap-4', 'mt-3', 'items-center')}>
+            <div className={clsx('flex', 'flex-wrap', 'gap-4', 'mt-3', 'items-center', 'justify-center', 'min-[1050px]:justify-start')}>
               {/* To update the redirect links for these buttons, modify the 'href' attribute. */}
               <a
                 href="/locations"
                 className="btn-find-locations"
-                style={{ padding: "12px 24px", fontSize: "0.8rem" }}
+                style={{ padding: "14px 28px", fontSize: "0.85rem" }}
               >
                 Find Locations
               </a>
@@ -38,18 +38,19 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className={clsx('relative', 'md:absolute', 'z-[51]', 'mt-12', 'md:mt-0', 'md:top-[-130px]', 'md:left-[47%]', 'w-fit', 'md:mx-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-            <div className="relative" style={{ transform: "scale(var(--hero-scale, 1))", transformOrigin: "left top", marginLeft: "var(--hero-ml, 0)" }}>
+          <div className={clsx('relative', 'min-[1050px]:absolute', 'z-[51]', 'mt-4', 'min-[1050px]:mt-0', 'min-[1050px]:top-[-100px]', 'min-[1050px]:left-[47%]', 'w-fit', 'mx-auto', 'min-[1050px]:mx-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+            <div className="relative" style={{ transform: "scale(var(--hero-scale, 1))", transformOrigin: "left top", marginLeft: "var(--hero-ml, 0)", marginBottom: "var(--hero-mb, 0)" }}>
               <style>{`
                 @media (max-width: 767px) {
                   .relative[style*="--hero-scale"] {
-                    --hero-scale: 0.65;
-                    --hero-ml: 5%;
+                    --hero-scale: 0.55;
+                    --hero-ml: 0%;
+                    --hero-mb: -230px;
                   }
                 }
               `}</style>
 
-              <div className={clsx('relative', 'w-[340px]',  'md:w-[400px]', 'lg:w-[470px]')}>
+              <div className={clsx('relative', 'w-[340px]',  'min-[1050px]:w-[400px]', 'min-[1050px]:w-[470px]')}>
                 <div 
                   className={clsx('absolute', '-left-8', 'top-[30%]', 'w-[250%]', 'h-[80%]', 'z-[-1]', 'opacity-[0.12]')}
                   style={{
@@ -69,7 +70,7 @@ export default function Hero() {
               </div>
 
               <div 
-                className={clsx('absolute', 'top-10', 'md:top-14', 'right-[-80px]', 'md:right-[-110px]', 'font-satisfy', 'font-normal', 'text-lg', 'md:text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
+                className={clsx('absolute', 'top-10', 'min-[1050px]:top-14', 'right-[-100px]', 'min-[1050px]:right-[-110px]', 'font-satisfy', 'font-normal', 'text-lg', 'min-[1050px]:text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
                 style={{ wordSpacing: "8px" }}
               >
                 good times
@@ -83,7 +84,7 @@ export default function Hero() {
               </div>
 
               <div
-                className={clsx('absolute', 'top-[120px]', 'md:top-[120px]', 'right-[-70px]', 'md:right-[-90px]', 'lg:right-[-100px]', 'w-[110px]', 'md:w-[130px]', 'lg:w-[140px]', 'z-10')}
+                className={clsx('absolute', 'top-[120px]', 'min-[1050px]:top-[120px]', 'right-[-70px]', 'min-[1050px]:right-[-90px]', 'min-[1050px]:right-[-100px]', 'w-[110px]', 'min-[1050px]:w-[130px]', 'min-[1050px]:w-[140px]', 'z-10')}
                 style={{ transform: "rotate(4deg)" }}
               >
                 {/* To change the polaroid image, update the 'src' attribute below. */}
@@ -97,7 +98,7 @@ export default function Hero() {
               </div>
 
               <div 
-                className={clsx('absolute', 'bottom-[20px]', 'md:bottom-[30px]', 'right-[-30px]', 'md:right-[-40px]', 'z-10', 'w-[150px]', 'md:w-[180px]')}
+                className={clsx('absolute', 'bottom-[20px]', 'min-[1050px]:bottom-[30px]', 'right-[-30px]', 'min-[1050px]:right-[-40px]', 'z-10', 'w-[150px]', 'min-[1050px]:w-[180px]')}
                 style={{ transform: "rotate(-6deg)" }}
               >
                 <div className="relative">
@@ -110,7 +111,7 @@ export default function Hero() {
                     className={clsx('w-full', 'h-auto')}
                   />
                   <div className={clsx('absolute', 'inset-0', 'flex', 'items-center', 'justify-center')}>
-                    <p className={clsx('font-courier-prime', 'font-bold', 'text-base', 'md:text-[18px]', 'text-text-dark/80', 'text-left', 'leading-snug', 'w-fit', 'px-1')}>
+                    <p className={clsx('font-courier-prime', 'font-bold', 'text-base', 'min-[1050px]:text-[18px]', 'text-text-dark/80', 'text-left', 'leading-snug', 'w-fit', 'px-1')}>
                       Collect
                       <br />
                       the moments.
@@ -121,10 +122,10 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className={clsx('absolute', 'bottom-[60px]', 'md:bottom-[80px]', 'right-[-130px]', 'md:right-[-160px]', 'z-20', 'w-[100px]', 'md:w-[130px]')}>
+              <div className={clsx('absolute', 'bottom-[60px]', 'min-[1050px]:bottom-[80px]', 'right-[-130px]', 'min-[1050px]:right-[-160px]', 'z-20', 'w-[100px]', 'min-[1050px]:w-[130px]')}>
                 {/* To change the stamp image, update the 'src' attribute below. */}
                 <Image
-                  src="/mc.png"
+                  src="/stamp1.png"
                   alt="Memory Club Stamp"
                   width={150}
                   height={150}

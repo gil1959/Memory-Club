@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function LocationsHero() {
   return (
-    <section className={clsx('relative', 'w-full', 'bg-cream-dark', 'overflow-hidden', 'pt-24', 'md:pt-20', 'pb-0', 'md:pb-0', 'lg:max-h-[1000px]', 'xl:max-h-[1000px]')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className={clsx('relative', 'w-full', 'bg-cream-dark', 'overflow-hidden', 'pt-24', 'md:pt-20', 'pb-0', 'md:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       
-      <div className={clsx('max-w-[1400px]', 'mx-auto', 'px-6', 'lg:px-12', 'w-full', 'flex', 'flex-col', 'lg:flex-row', 'items-center', 'gap-10', 'lg:gap-8')}>
+      <div className={clsx('w-full', 'flex', 'flex-col', 'lg:flex-row', 'items-center', 'lg:items-stretch', 'gap-10', 'lg:gap-0')}>
         
         {/* Left Content */}
-        <div className={clsx('w-full', 'lg:w-[50%]', 'flex', 'flex-col', 'gap-4', 'lg:gap-6', 'relative', 'z-10', 'lg:translate-x-4')}>
-          <div className={clsx('font-caveat', 'text-2xl', 'md:text-3xl', 'text-[#3D3530]', '-rotate-6', 'flex', 'flex-col', 'gap-1', 'mb-2', '-translate-y-8')}>
+        <div className={clsx('w-full', 'lg:w-[45%]', 'flex', 'flex-col', 'gap-4', 'lg:gap-6', 'relative', 'z-10', 'px-6', 'lg:pl-[max(2rem,calc((100vw-1400px)/2+3rem))]', 'lg:pr-8', 'lg:py-16')}>
+          <div className={clsx('font-caveat', 'text-2xl', 'md:text-3xl', 'text-[#3D3530]', '-rotate-6', 'flex', 'flex-col', 'gap-1', 'mb-2', '-translate-y-6')}>
             <span className="leading-tight">Great moments are</span>
             <span className={clsx('leading-tight', 'flex', 'items-center', 'gap-2', '-rotate-3', '-translate-x-2')}>
               closer than you think.
@@ -28,33 +28,16 @@ export default function LocationsHero() {
           <a href="#locations" className={clsx('w-fit', 'mt-2', 'bg-[#1A1A1A]', 'text-[#EAE0D5]', 'px-8', 'py-3.5', 'rounded-sm', 'font-inter', 'text-xs', 'font-bold', 'tracking-[0.2em]', 'uppercase', 'hover:bg-[#2C2520]', 'transition-colors')}>
             BROWSE CITIES
           </a>
-
-          {/* Actual Polaroids */}
-          <div className={clsx('relative', 'w-full', 'h-[250px]', 'md:h-[350px]', 'mt-8', 'opacity-90')}>
-            {/* Polaroid 1 */}
-            <div className={clsx('absolute', 'left-0', '-top-6', 'w-40', 'md:w-68', 'drop-shadow-xl', '-rotate-10', 'z-10')}>
-              <Image src="/img1locations.png" alt="Memory Club Venue" width={300} height={400} className={clsx('w-full', 'h-auto')} />
-            </div>
-            {/* Polaroid 2 */}
-            <div className={clsx('absolute', 'left-32', 'md:left-60', '-top-10', 'w-32', 'md:w-48', 'drop-shadow-xl', 'rotate-3', 'z-20')}>
-              <Image src="/img2locations.png" alt="Memory Club Photobooth Strip" width={250} height={500} className={clsx('w-full', 'h-auto')} />
-            </div>
-            
-            {/* MC Stamp */}
-            <div className={clsx('absolute', 'left-56', 'md:left-90', 'top-32', 'md:top-56', 'w-20', 'md:w-28', 'rotate-12', 'z-30', 'opacity-80')}>
-               <Image src="/mc.png" alt="Memory Club Stamp" width={150} height={150} className={clsx('w-full', 'h-auto')} />
-            </div>
-          </div>
         </div>
 
-        {/* Right Content - Vintage Map */}
-        <div className={clsx('w-full', 'lg:w-[100%]', 'h-[400px]', 'md:h-[600px]', 'lg:h-[1000px]', 'relative', 'mt-10','translate-x-13', 'lg:mt-0', 'flex', 'justify-center', 'items-center','-translate-y-35', 'drop-shadow-2xl')}>
+        {/* Right Content - Vintage Map flush to right edge */}
+        <div className={clsx('w-full', 'lg:w-[50%]', 'h-[350px]', 'md:h-[500px]', 'lg:h-[650px]', 'relative', 'lg:ml-auto')}>
            <Image 
              src="/mapslocationpagehero.png" 
              alt="Memory Club Locations Map" 
              fill 
              className={clsx('object-contain', 'object-right')}
-             sizes="(max-width: 1024px) 100vw, 55vw"
+             sizes="(max-width: 1024px) 100vw, 50vw"
            />
         </div>
 
