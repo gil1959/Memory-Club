@@ -147,7 +147,7 @@ export default function VenuesStory() {
               <img src="/img6section4.png" alt="Photo 6" className={clsx('w-full', 'min-[1050px]:w-[90px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
             
-            <div className={clsx('relative', 'shrink-0', 'z-5', 'min-[1050px]:-ml-6', 'min-[1050px]:mt-1', 'min-[1050px]:rotate-[13deg]', 'min-[1050px]:translate-x-70', 'min-[1050px]:translate-y-15', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
+            <div className={clsx('relative', 'shrink-0', 'z-5', '-mt-6', 'min-[1050px]:-mt-6', 'min-[1050px]:-ml-6', 'min-[1050px]:rotate-[13deg]', 'min-[1050px]:translate-x-70', 'min-[1050px]:translate-y-5', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               {/* To change the seventh photo, update the 'src' attribute below. */}
               <img src="/img7section4.png" alt="Photo 7" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>

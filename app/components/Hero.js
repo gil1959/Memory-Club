@@ -70,7 +70,7 @@ export default function Hero() {
               </div>
 
               <div 
-                className={clsx('absolute', 'top-10', 'min-[1050px]:top-14', 'right-[-100px]', 'min-[1050px]:right-[-110px]', 'font-satisfy', 'font-normal', 'text-lg', 'min-[1050px]:text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
+                className={clsx('absolute', 'top-2', 'min-[1050px]:top-6', 'right-[-100px]', 'min-[1050px]:right-[-110px]', 'font-satisfy', 'font-normal', 'text-lg', 'min-[1050px]:text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
                 style={{ wordSpacing: "8px" }}
               >
                 good times

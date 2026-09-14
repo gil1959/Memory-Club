@@ -35,14 +35,14 @@ export default function OurStory() {
             </div>
             
             <div className={clsx('w-full', 'md:w-auto', 'relative', 'mt-10', 'md:mt-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-              <div className={clsx('relative', 'w-[240px]', 'md:w-[320px]', 'md:w-[360px]', 'mx-auto', 'md:mx-0')}>
+              <div className={clsx('relative', 'w-[200px]', 'md:w-[260px]', 'md:w-[300px]', 'mx-auto', 'md:mx-0')}>
                 <Image 
                   src="/img1ourstory.png" 
                   alt="Girls hugging" 
                   width={360} 
                   height={450} 
                   className={clsx('w-full', 'h-auto', 'object-cover', 'relative', 'z-10', 'transition-transform', 'duration-300')}
-                  style={{ transform: "scale(1) translateX(0px) translateY(-40px) rotate(0deg)" }}
+                  style={{ transform: "scale(1) translateX(0px) translateY(-10px) rotate(0deg)" }}
                 />
                 
                 <div className={clsx('absolute', 'z-20', 'transition-transform', 'duration-300', 'w-[80px]', 'md:w-[100px]')}
@@ -73,7 +73,7 @@ export default function OurStory() {
         <div style={bgStyle} className="w-full">
           <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col-reverse', 'md:flex-row', 'items-center', 'justify-center', 'gap-8', 'md:gap-12', 'md:gap-16', 'py-12', 'md:py-16')}>
             <div className={clsx('w-full', 'md:w-auto', 'relative', 'flex', 'justify-center', 'md:justify-end')} data-aos="fade-right" data-aos-duration="1200">
-              <div className={clsx('bg-white', 'p-2', 'md:p-3', 'shadow-xl', 'transform', 'rotate-2', 'w-[360px]', 'md:w-[500px]', 'md:w-[550px]')}>
+              <div className={clsx('bg-white', 'p-2', 'md:p-3', 'shadow-xl', 'transform', 'rotate-2', 'w-[280px]', 'md:w-[400px]', 'md:w-[440px]')}>
                  <Image 
                    src="/img3ourstory.png" 
                    alt="Hand holding strip" 
