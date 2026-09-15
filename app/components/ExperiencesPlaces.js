@@ -152,7 +152,7 @@ export default function ExperiencesPlaces() {
                 alt="Classic strip photo booth"
                 width={640}
                 height={800}
-                className={clsx('w-full', 'h-auto')}
+                className={clsx('w-full', 'h-auto', 'min-[878px]:-translate-x-3')}
               />
             </div>
 

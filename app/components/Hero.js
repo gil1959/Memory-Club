@@ -70,7 +70,7 @@ export default function Hero() {
               </div>
 
               <div 
-                className={clsx('absolute', 'top-2', 'min-[1050px]:top-6', 'right-[-100px]', 'min-[1050px]:right-[-110px]', 'font-satisfy', 'font-normal', 'text-lg', 'min-[1050px]:text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
+                className={clsx('absolute', 'top-2', 'min-[1050px]:top-6', 'right-[-100px]', 'min-[1050px]:right-[-180px]', 'font-satisfy', 'font-normal', 'text-lg', 'min-[1050px]:text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
                 style={{ wordSpacing: "8px" }}
               >
                 good times
@@ -84,7 +84,7 @@ export default function Hero() {
               </div>
 
               <div
-                className={clsx('absolute', 'top-[120px]', 'min-[1050px]:top-[120px]', 'right-[-70px]', 'min-[1050px]:right-[-90px]', 'min-[1050px]:right-[-100px]', 'w-[110px]', 'min-[1050px]:w-[130px]', 'min-[1050px]:w-[140px]', 'z-10')}
+                className={clsx('absolute', 'top-[80px]', 'min-[1050px]:top-[70px]', 'right-[-40px]', 'min-[1050px]:right-[-60px]', 'w-[110px]', 'min-[1050px]:w-[170px]', 'z-10')}
                 style={{ transform: "rotate(4deg)" }}
               >
                 {/* To change the polaroid image, update the 'src' attribute below. */}
@@ -122,7 +122,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className={clsx('absolute', 'bottom-[60px]', 'min-[1050px]:bottom-[80px]', 'right-[-130px]', 'min-[1050px]:right-[-160px]', 'z-20', 'w-[100px]', 'min-[1050px]:w-[130px]')}>
+              <div className={clsx('absolute', 'bottom-[60px]', 'min-[1050px]:bottom-[80px]', 'right-[-100px]', 'min-[1050px]:right-[-150px]', 'z-20', 'w-[100px]', 'min-[1050px]:w-[160px]')}>
                 {/* To change the stamp image, update the 'src' attribute below. */}
                 <Image
                   src="/stamp1.png"

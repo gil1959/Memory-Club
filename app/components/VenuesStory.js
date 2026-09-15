@@ -115,7 +115,7 @@ export default function VenuesStory() {
           </div>
 
           <div className={clsx('w-full', 'relative', 'flex', 'flex-wrap', 'min-[1050px]:flex-nowrap', 'items-center', 'justify-center', 'gap-2', 'min-[1050px]:gap-0', 'mb-4', 'min-[1050px]:mb-2', 'px-4', 'min-[1050px]:px-0')} data-aos="zoom-in" data-aos-duration="1200">
-            <div className={clsx('relative', 'shrink-0', 'z-10', 'min-[1050px]:rotate-[-8deg]', 'min-[1050px]:translate-x-[-300px]', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
+            <div className={clsx('relative', 'shrink-0', 'z-10', 'min-[1050px]:rotate-[-8deg]', 'min-[1050px]:translate-x-[-280px]', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               {/* To change the first photo, update the 'src' attribute below. */}
               <img src="/img1section4.png" alt="Photo 1" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
@@ -128,28 +128,28 @@ export default function VenuesStory() {
             
             <div className={clsx('relative', 'shrink-0', 'z-20', 'min-[1050px]:-ml-8', 'min-[1050px]:rotate-[-5deg]', 'min-[1050px]:translate-x-[-50px]', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               {/* To change the third photo, update the 'src' attribute below. */}
-              <img src="/img3section4.png" alt="Photo 3" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
+              <img src="/img3section4.png" alt="Photo 3" className={clsx('w-full', 'min-[1050px]:w-[160px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
             
             <div className={clsx('relative', 'shrink-0', 'z-30', 'min-[1050px]:-ml-8', 'min-[1050px]:mt-2', 'min-[1050px]:rotate-[-5deg]', 'min-[1050px]:translate-x-[-5px]', 'min-[1050px]:translate-y-[-15px]', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               <div className={clsx('hidden', 'min-[1050px]:block', 'absolute', '-top-1.5', 'left-1/2', '-translate-x-1/2', 'w-10', 'h-4', 'bg-tape', 'rotate-[3deg]', 'z-20')} />
               {/* To change the fourth photo, update the 'src' attribute below. */}
-              <img src="/img4section4.png" alt="Photo 4" className={clsx('w-full', 'min-[1050px]:w-[90px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
+              <img src="/img4section4.png" alt="Photo 4" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
             
             <div className={clsx('relative', 'shrink-0', 'z-10', 'min-[1050px]:-ml-8', 'min-[1050px]:rotate-[-4deg]', 'min-[1050px]:translate-x-20', 'min-[1050px]:scale-150', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               {/* To change the fifth photo, update the 'src' attribute below. */}
-              <img src="/img5section4.png" alt="Photo 5" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
+              <img src="/img5section4.png" alt="Photo 5" className={clsx('w-full', 'min-[1050px]:w-[100px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
             
             <div className={clsx('relative', 'shrink-0', 'z-20', 'min-[1050px]:-ml-8', 'min-[1050px]:mt-4', 'min-[1050px]:rotate-[10deg]', 'min-[1050px]:translate-x-50', 'min-[1050px]:scale-180', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               {/* To change the sixth photo, update the 'src' attribute below. */}
-              <img src="/img6section4.png" alt="Photo 6" className={clsx('w-full', 'min-[1050px]:w-[90px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
+              <img src="/img6section4.png" alt="Photo 6" className={clsx('w-full', 'min-[1050px]:w-[80px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
             
             <div className={clsx('relative', 'shrink-0', 'z-5', '-mt-6', 'min-[1050px]:-mt-6', 'min-[1050px]:-ml-6', 'min-[1050px]:rotate-[13deg]', 'min-[1050px]:translate-x-70', 'min-[1050px]:translate-y-5', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
               {/* To change the seventh photo, update the 'src' attribute below. */}
-              <img src="/img7section4.png" alt="Photo 7" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
+              <img src="/img7section4.png" alt="Photo 7" className={clsx('w-full', 'min-[1050px]:w-[110px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
           </div>
 
@@ -300,10 +300,10 @@ export default function VenuesStory() {
           }}
         />
 
-        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'py-4', 'min-[1050px]:py-2', 'flex', 'flex-col', 'min-[1050px]:flex-row', 'items-center', 'justify-center', 'relative', 'z-10', 'gap-4', 'sm:gap-12', 'min-[1050px]:gap-20', 'min-[1050px]:gap-32')}>
+        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'py-2', 'min-[1050px]:py-1', 'flex', 'flex-col', 'min-[1050px]:flex-row', 'items-center', 'justify-center', 'relative', 'z-10', 'gap-4', 'sm:gap-8', 'min-[1050px]:gap-20', 'min-[1050px]:gap-32', 'min-[1050px]:min-h-[180px]')}>
           {/* Left: Polaroid photo with tape */}
-          <div className={clsx('shrink-0', 'min-[1050px]:-translate-y-2', 'relative', '-rotate-3', 'hover:rotate-0', 'transition-transform', 'duration-300')}>
-            <div className={clsx('w-20', 'min-[1050px]:w-28', 'min-[1050px]:w-28', 'drop-shadow-md')}>
+          <div className={clsx('shrink-0', 'min-[1050px]:translate-y-3', 'relative', 'z-[-1]', '-rotate-3', 'hover:rotate-0', 'transition-transform', 'duration-300')}>
+            <div className={clsx('w-24', 'min-[1050px]:w-58', 'drop-shadow-md')}>
               <Image
                 src="/img1section5.png"
                 alt="Moments"
@@ -333,7 +333,7 @@ export default function VenuesStory() {
             </div>
 
             <div className={clsx('relative', 'inline-block')}>
-              <p className={clsx('font-playfair', 'text-[12px]', 'sm:text-xs', 'min-[1050px]:text-sm', 'min-[1050px]:text-[14px]', 'text-[#2C2520]', 'tracking-wide', 'font-normal')}>
+              <p className={clsx('font-playfair', 'text-sm', 'min-[1050px]:text-[22px]', 'text-[#2C2520]', 'tracking-wide', 'font-medium')}>
                 Some moments are meant to outlive your camera roll.
               </p>
               <svg

@@ -7,8 +7,6 @@ import Image from 'next/image';
 import clsx from 'clsx';
 
 export default function PartnerWithUsPage() {
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
-
   const faqs = [
     {
       num: '01',
@@ -62,9 +60,8 @@ export default function PartnerWithUsPage() {
 
             <div className="flex flex-col w-full border-t border-[#1A1A1A]/20">
               {faqs.map((faq, index) => {
-                const isOpen = openFaqIndex === index;
                 return (
-                  <div key={index} className="flex gap-6 py-8 border-b border-[#1A1A1A]/20 items-start cursor-pointer group" onClick={() => setOpenFaqIndex(isOpen ? -1 : index)}>
+                  <div key={index} className="flex gap-6 py-8 border-b border-[#1A1A1A]/20 items-start">
                     {/* Number */}
                     <div className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#A84A3B] shrink-0 border-r border-[#1A1A1A]/20 pr-6 mr-2 font-medium">
                       {faq.num}
@@ -72,18 +69,12 @@ export default function PartnerWithUsPage() {
                     
                     {/* Content */}
                     <div className="flex-1 flex flex-col pt-1">
-                      <div className="flex justify-between items-start gap-4">
-                        <h3 className="font-anton text-xl md:text-[22px] leading-tight uppercase text-[#1A1A1A] tracking-wide whitespace-pre-line">
-                          {faq.title}
-                        </h3>
-                        {/* Plus Icon */}
-                        <svg className={clsx("w-5 h-5 text-[#A84A3B] shrink-0 mt-0.5 transition-transform duration-300", isOpen && "rotate-45")} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
-                      </div>
+                      <h3 className="font-anton text-xl md:text-[22px] leading-tight uppercase text-[#1A1A1A] tracking-wide whitespace-pre-line">
+                        {faq.title}
+                      </h3>
                       
-                      {/* Accordion Body */}
-                      <div className={clsx("overflow-hidden transition-all duration-300", isOpen ? "max-h-[200px] mt-3 opacity-100" : "max-h-0 opacity-0")}>
+                      {/* Body */}
+                      <div className="mt-3">
                         <p className="font-inter text-sm leading-relaxed text-[#1A1A1A]/80 whitespace-pre-line font-medium">
                           {faq.content}
                         </p>

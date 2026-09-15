@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer id="contact" className={clsx('w-full', 'flex', 'flex-col', 'relative', 'z-0')}>
+    <footer id="contact" className={clsx('w-full', 'flex', 'flex-col', 'relative', 'z-30')}>
       <style>{`
         @media (max-width: 1023px) {
           #footer-bg-container {
