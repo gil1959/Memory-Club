@@ -11,7 +11,7 @@ export default function AdminPage() {
 
   return (
     <main 
-      className={clsx('h-screen', 'w-full', 'flex', 'flex-col', 'relative', 'text-[#1A1A1A]', 'overflow-hidden')}
+      className={clsx('min-h-screen', 'md:h-screen', 'w-full', 'flex', 'flex-col', 'relative', 'text-[#1A1A1A]', 'overflow-x-hidden', 'md:overflow-hidden')}
       style={{ 
         backgroundImage: "url('/bgadmin.png')", 
         backgroundSize: "cover", 
@@ -43,10 +43,10 @@ export default function AdminPage() {
       </header>
 
       {/* Main Content: 3 Columns, flexible height to fit 1 screen */}
-      <div className={clsx('flex-1', 'w-full', 'max-w-[1600px]', 'mx-auto', 'p-3', 'xl:p-4', 'grid', 'grid-cols-1', 'md:grid-cols-12', 'gap-4', 'xl:gap-6', 'min-h-0')}>
+      <div className={clsx('flex-1', 'w-full', 'max-w-[1600px]', 'mx-auto', 'p-3', 'xl:p-4', 'flex', 'flex-col', 'md:grid', 'md:grid-cols-12', 'gap-4', 'xl:gap-6', 'min-h-0', 'overflow-y-auto', 'md:overflow-hidden')}>
         
         {/* LEFT COLUMN: Controls */}
-        <div className={clsx('md:col-span-3', 'flex', 'flex-col', 'gap-3', 'xl:gap-4', 'order-2', 'md:order-1', 'h-full')}>
+        <div className={clsx('md:col-span-3', 'flex', 'flex-col', 'gap-3', 'xl:gap-4', 'order-2', 'md:order-1', 'md:h-full')}>
           
           {/* Models */}
           <div className={clsx('flex', 'flex-col', 'gap-2')}>
@@ -162,8 +162,8 @@ export default function AdminPage() {
         </div>
 
         {/* CENTER COLUMN: Main Image (Flexible Height to fit) */}
-        <div className={clsx('md:col-span-6', 'flex', 'flex-col', 'items-center', 'justify-center', 'order-1', 'md:order-2', 'h-full', 'min-h-0')}>
-          <div className={clsx('w-full', 'flex-1', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'min-h-[200px]', 'lg:min-h-0')}>
+        <div className={clsx('md:col-span-6', 'flex', 'flex-col', 'items-center', 'justify-center', 'order-1', 'md:order-2', 'md:h-full', 'md:min-h-0')}>
+          <div className={clsx('w-full', 'h-[280px]', 'sm:h-[350px]', 'md:flex-1', 'md:h-auto', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center')}>
             <Image 
               src={
                 selectedModel === 'signature' 
@@ -216,7 +216,7 @@ export default function AdminPage() {
         </div>
 
         {/* RIGHT COLUMN: Specs & Details */}
-        <div className={clsx('md:col-span-3', 'flex', 'flex-col', 'gap-3', 'xl:gap-4', 'order-3', 'h-full')}>
+        <div className={clsx('md:col-span-3', 'flex', 'flex-col', 'gap-3', 'xl:gap-4', 'order-3', 'md:h-full')}>
           
           {/* SECTION 3: Photo Strips (Now separate bordered box) */}
           <div className={clsx('p-2', 'xl:p-3', 'border', 'border-[#1A1A1A]/15', 'rounded-lg', 'flex', 'flex-col', 'gap-1', 'xl:gap-2')}>
