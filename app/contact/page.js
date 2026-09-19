@@ -29,7 +29,7 @@ export default function ContactPage() {
     },
     {
       label: 'Instagram',
-      value: '@memoryclub.co',
+      value: '@yourmemoryclub',
       icon: (
         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect width="16" height="16" x="4" y="4" rx="4" />
@@ -40,7 +40,7 @@ export default function ContactPage() {
     },
     {
       label: 'TikTok',
-      value: '@memoryclub.co',
+      value: '@yourmemoryclub',
       icon: (
         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
@@ -49,7 +49,7 @@ export default function ContactPage() {
     },
     {
       label: 'Pinterest',
-      value: '@memoryclub.co',
+      value: '@yourmemoryclub',
       icon: (
         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10" />

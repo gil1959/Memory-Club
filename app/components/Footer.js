@@ -77,11 +77,11 @@ export default function Footer() {
                 Follow Along
               </h4>
               <p className={clsx('font-inter', 'text-[10px]', 'lg:text-[11px]', 'text-[#EAE0D5]/70', 'uppercase', 'tracking-widest')}>
-                @memoryclub.co
+                @yourmemoryclub
               </p>
               <div className={clsx('hidden', 'lg:flex', 'gap-4', 'mt-1', 'justify-center', 'lg:justify-start')}>
                 {/* To update the social media redirect links, modify the 'href' attribute for each anchor tag below. */}
-                <a href="#" className={clsx('text-[#EAE0D5]/90', 'hover:text-[#EAE0D5]', 'transition-colors')} aria-label="Instagram">
+                <a href="https://instagram.com/yourmemoryclub" target="_blank" rel="noopener noreferrer" className={clsx('text-[#EAE0D5]/90', 'hover:text-[#EAE0D5]', 'transition-colors')} aria-label="Instagram">
                   <svg className={clsx('w-5', 'h-5')} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
                 <a href="#" className={clsx('text-[#EAE0D5]/90', 'hover:text-[#EAE0D5]', 'transition-colors')} aria-label="TikTok">
@@ -118,7 +118,7 @@ export default function Footer() {
       <div className={clsx('w-full', 'bg-[#151515]', 'py-6', 'lg:py-8', 'text-center', 'flex', 'flex-col', 'items-center', 'gap-6')}>
         <div className={clsx('lg:hidden', 'flex', 'flex-col', 'items-center', 'gap-4')}>
           <div className={clsx('flex', 'gap-4', 'justify-center')}>
-            <a href="#" className={clsx('text-[#EAE0D5]/90', 'hover:text-[#EAE0D5]', 'transition-colors')} aria-label="Instagram">
+            <a href="https://instagram.com/yourmemoryclub" target="_blank" rel="noopener noreferrer" className={clsx('text-[#EAE0D5]/90', 'hover:text-[#EAE0D5]', 'transition-colors')} aria-label="Instagram">
               <svg className={clsx('w-5', 'h-5')} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
             <a href="#" className={clsx('text-[#EAE0D5]/90', 'hover:text-[#EAE0D5]', 'transition-colors')} aria-label="TikTok">

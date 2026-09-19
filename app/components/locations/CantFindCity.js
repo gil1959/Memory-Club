@@ -12,7 +12,7 @@ export default function CantFindCity() {
   const venueOptions = ['Bar', 'Hotel', 'Restaurant', 'Event Space', 'Other'];
 
   return (
-    <section className={clsx('w-full', 'bg-cream', 'py-0', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className={clsx('w-full', 'bg-cream', 'py-0', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20', isModalOpen ? 'z-[9999]' : 'z-10')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className={clsx('max-w-[1200px]', 'mx-auto', 'px-6', 'lg:px-12', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'gap-12', 'md:gap-20')}>
         
         {/* Left: Map Piece */}

@@ -13,7 +13,7 @@ export default function LocationsPage() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 relative z-20">
+      <main className="flex-1 relative z-40">
         <LocationsHero />
         <OurLocations />
         <CantFindCity />

@@ -11,7 +11,7 @@ export default function AdminPage() {
 
   return (
     <main 
-      className={clsx('min-h-screen', 'w-full', 'flex', 'flex-col', 'relative', 'text-[#1A1A1A]', 'overflow-x-hidden')}
+      className={clsx('h-screen', 'w-full', 'flex', 'flex-col', 'relative', 'text-[#1A1A1A]', 'overflow-hidden')}
       style={{ 
         backgroundImage: "url('/bgadmin.png')", 
         backgroundSize: "cover", 
@@ -35,28 +35,11 @@ export default function AdminPage() {
           </Link>
           <span className={clsx('text-[#1A1A1A]/30', 'text-xl', 'font-light', 'hidden', 'md:block')}>/</span>
           <div className={clsx('flex', 'flex-col', 'hidden', 'md:flex')}>
-            <span className={clsx('font-inter', 'text-[9px]', 'xl:text-[10px]', 'font-bold', 'tracking-wider', 'uppercase')}>Partner Configurator</span>
-            <span className={clsx('font-inter', 'text-[8px]', 'text-[#1A1A1A]/60', 'tracking-wider', 'uppercase')}>Design. Preview. Place.</span>
+            <span className={clsx('font-inter', 'text-[9px]', 'xl:text-[10px]', 'font-bold', 'tracking-wider', 'uppercase')}>FOR PARTNERS ONLY</span>
+            <span className={clsx('font-inter', 'text-[8px]', 'text-[#1A1A1A]/60', 'tracking-wider', 'uppercase')}>Made to be remembered</span>
           </div>
         </div>
 
-        <div className={clsx('flex', 'items-center', 'gap-4', 'w-full', 'md:w-auto', 'justify-between', 'md:justify-end')}>
-          <div className={clsx('flex', 'flex-col', 'text-right', 'hidden', 'md:flex')}>
-            <span className={clsx('font-inter', 'text-[8px]', 'text-[#1A1A1A]/60', 'tracking-wider', 'uppercase')}>Good Places</span>
-            <span className={clsx('font-inter', 'text-[8px]', 'font-bold', 'tracking-wider', 'uppercase')}>Better Memories.</span>
-          </div>
-          <span className={clsx('text-[#1A1A1A]/30', 'text-xl', 'font-light', 'hidden', 'md:block')}>/</span>
-          
-          <div className={clsx('flex', 'items-center', 'gap-2')}>
-            <button className={clsx('px-3', 'xl:px-4', 'py-1.5', 'border', 'border-[#1A1A1A]/20', 'rounded', 'text-[9px]', 'xl:text-[10px]', 'font-bold', 'tracking-wider', 'uppercase', 'hover:bg-[#1A1A1A]/5', 'transition-colors')}>
-              Save Setup
-            </button>
-            <button className={clsx('px-3', 'xl:px-4', 'py-1.5', 'bg-[#1A1A1A]', 'text-[#EAE0D5]', 'rounded', 'text-[9px]', 'xl:text-[10px]', 'font-bold', 'tracking-wider', 'uppercase', 'flex', 'items-center', 'gap-1.5', 'hover:bg-[#2C2520]', 'transition-colors')}>
-              Share
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </button>
-          </div>
-        </div>
       </header>
 
       {/* Main Content: 3 Columns, flexible height to fit 1 screen */}
@@ -180,9 +163,25 @@ export default function AdminPage() {
 
         {/* CENTER COLUMN: Main Image (Flexible Height to fit) */}
         <div className={clsx('md:col-span-6', 'flex', 'flex-col', 'items-center', 'justify-center', 'order-1', 'md:order-2', 'h-full', 'min-h-0')}>
-          <div className={clsx('w-full', 'flex-1', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'min-h-[300px]', 'md:min-h-[400px]', 'lg:min-h-0')}>
+          <div className={clsx('w-full', 'flex-1', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'min-h-[200px]', 'lg:min-h-0')}>
             <Image 
-              src={selectedModel === 'signature' ? '/frontmodel1.png' : '/frontmodel2.png'} 
+              src={
+                selectedModel === 'signature' 
+                  ? (selectedTheme === 'classic' ? '/classicsignature.png' :
+                     selectedTheme === 'sexy' ? '/sexysignature.png' :
+                     selectedTheme === 'retro' ? '/retrosignature.png' :
+                     selectedTheme === 'lgbtq' ? '/lgbtsignature.png' :
+                     selectedTheme === 'halloween' ? '/halloweensignature.png' :
+                     selectedTheme === 'custom' ? '/customsignature.png' :
+                     '/frontmodel1.png') // default/bar
+                  : (selectedTheme === 'classic' ? '/classicmini.png' :
+                     selectedTheme === 'sexy' ? '/sexymini.png' :
+                     selectedTheme === 'retro' ? '/retromini.png' :
+                     selectedTheme === 'lgbtq' ? '/lgbtmini.png' :
+                     selectedTheme === 'halloween' ? '/halloweenmini.png' :
+                     selectedTheme === 'custom' ? '/custommini.png' :
+                     '/frontmodel2.png') // default/bar
+              } 
               alt={selectedModel === 'signature' ? 'Signature Booth' : 'The Arch Mini'} 
               fill 
               className={clsx('object-contain', 'transition-all', 'duration-500', 'ease-in-out', 'drop-shadow-xl')} 
@@ -191,7 +190,7 @@ export default function AdminPage() {
             />
           </div>
           
-          <div className={clsx('flex', 'flex-col', 'items-center', 'text-center', 'gap-1', 'mt-2', 'shrink-0')}>
+          <div className={clsx('flex', 'flex-col', 'items-center', 'text-center', 'gap-1', 'mt-1', 'shrink-0')}>
             <div className={clsx('w-6', 'h-px', 'bg-[#1A1A1A]/30')}></div>
             <h1 className={clsx('font-playfair', 'text-3xl', 'xl:text-4xl', 'font-bold', 'text-[#4A2017]', 'leading-none')}>
               {selectedModel === 'signature' ? '01' : '04'}
@@ -202,7 +201,17 @@ export default function AdminPage() {
             <p className={clsx('font-playfair', 'text-xs', 'xl:text-sm', 'text-[#1A1A1A]/80', 'italic')}>
               {selectedModel === 'signature' ? 'A bold statement for larger spaces.' : 'A softer silhouette for standout venues.'}
             </p>
-            <div className={clsx('w-6', 'h-px', 'bg-[#1A1A1A]/30', 'mt-1')}></div>
+            
+            <button className={clsx('mt-1', 'w-[220px]', 'flex', 'items-center', 'justify-between', 'p-2', 'border', 'border-[#1A1A1A]/20', 'bg-[#1A1A1A]/[0.02]', 'rounded-md', 'group', 'hover:bg-[#1A1A1A]/5', 'transition-colors')}>
+              <div className={clsx('flex', 'items-center', 'gap-2')}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-[#1A1A1A]"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
+                <div className={clsx('flex', 'flex-col', 'text-left')}>
+                  <span className={clsx('font-inter', 'text-[9px]', 'font-bold', 'tracking-wider', 'uppercase')}>View in your space</span>
+                  <span className={clsx('font-inter', 'text-[7px]', 'text-[#1A1A1A]/60', 'tracking-wider', 'uppercase')}>AR / 3D Model</span>
+                </div>
+              </div>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={clsx('group-hover:translate-x-1', 'group-hover:-translate-y-1', 'transition-transform')}><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </button>
           </div>
         </div>
 
@@ -210,7 +219,7 @@ export default function AdminPage() {
         <div className={clsx('md:col-span-3', 'flex', 'flex-col', 'gap-3', 'xl:gap-4', 'order-3', 'h-full')}>
           
           {/* SECTION 3: Photo Strips (Now separate bordered box) */}
-          <div className={clsx('p-3', 'xl:p-4', 'border', 'border-[#1A1A1A]/15', 'rounded-lg', 'flex', 'flex-col', 'gap-2', 'xl:gap-3')}>
+          <div className={clsx('p-2', 'xl:p-3', 'border', 'border-[#1A1A1A]/15', 'rounded-lg', 'flex', 'flex-col', 'gap-1', 'xl:gap-2')}>
             <h2 className={clsx('font-inter', 'text-[10px]', 'xl:text-[11px]', 'font-bold', 'tracking-wider', 'uppercase')}>3. Photo Strips & Branding</h2>
             
             {/* Strips */}
@@ -225,15 +234,15 @@ export default function AdminPage() {
             
             {/* Checkmarks / Edit Options */}
             <div className={clsx('flex', 'flex-col', 'w-full')}>
-              <div className={clsx('flex', 'items-center', 'gap-2', 'py-1.5', 'border-b', 'border-[#1A1A1A]/10')}>
+              <div className={clsx('flex', 'items-center', 'gap-2', 'py-1', 'border-b', 'border-[#1A1A1A]/10')}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[#1A1A1A]/80"><path d="m18 5-3-3H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z"></path><path d="M8 18h1"></path><path d="M18.4 9.6a2 2 0 1 1 3 3L17 17l-4 1 1-4Z"></path></svg>
                 <span className={clsx('font-inter', 'text-[9px]', 'xl:text-[10px]', 'text-[#1A1A1A]/90')}>Logo can be adjusted</span>
               </div>
-              <div className={clsx('flex', 'items-center', 'gap-2', 'py-1.5', 'border-b', 'border-[#1A1A1A]/10')}>
+              <div className={clsx('flex', 'items-center', 'gap-2', 'py-1', 'border-b', 'border-[#1A1A1A]/10')}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[#1A1A1A]/80"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
                 <span className={clsx('font-inter', 'text-[9px]', 'xl:text-[10px]', 'text-[#1A1A1A]/90')}>Layout can be adjusted</span>
               </div>
-              <div className={clsx('flex', 'items-center', 'gap-2', 'py-1.5')}>
+              <div className={clsx('flex', 'items-center', 'gap-2', 'py-1')}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-[#1A1A1A]/80"><path d="M4 7V4h16v3"></path><path d="M9 20h6"></path><path d="M12 4v16"></path></svg>
                 <span className={clsx('font-inter', 'text-[9px]', 'xl:text-[10px]', 'text-[#1A1A1A]/90')}>Custom text can be adjusted</span>
               </div>
@@ -241,7 +250,7 @@ export default function AdminPage() {
           </div>
 
           {/* SECTION 4: Venue Setup (Separate bordered box) */}
-          <div className={clsx('p-3', 'xl:p-4', 'border', 'border-[#1A1A1A]/15', 'rounded-lg', 'flex', 'flex-col', 'gap-2', 'xl:gap-3', 'bg-[#1A1A1A]/[0.02]')}>
+          <div className={clsx('p-2', 'xl:p-3', 'border', 'border-[#1A1A1A]/15', 'rounded-lg', 'flex', 'flex-col', 'gap-1', 'bg-[#1A1A1A]/[0.02]')}>
             <h2 className={clsx('font-inter', 'text-[10px]', 'xl:text-[11px]', 'font-bold', 'tracking-wider', 'uppercase')}>4. Venue Setup</h2>
             
             <div className={clsx('flex', 'flex-col')}>
@@ -253,7 +262,7 @@ export default function AdminPage() {
                 { icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>, label: 'MAINTENANCE', value: 'Fully managed by MemoryClub' },
                 { icon: <><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></>, label: 'UPFRONT COST', value: '$0' },
               ].map((item, i) => (
-                <div key={i} className={clsx('flex', 'items-center', 'gap-2', 'py-1', 'xl:py-1.5', 'border-b', 'border-[#1A1A1A]/10', 'last:border-0')}>
+                <div key={i} className={clsx('flex', 'items-center', 'gap-2', 'py-1', 'border-b', 'border-[#1A1A1A]/10', 'last:border-0')}>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={clsx('text-[#1A1A1A]/80', 'w-3', 'shrink-0')}>
                     {item.icon}
                   </svg>
@@ -263,37 +272,12 @@ export default function AdminPage() {
               ))}
             </div>
 
-            {/* AR Button */}
-            <button className={clsx('w-full', 'flex', 'items-center', 'justify-between', 'p-2', 'xl:p-3', 'border', 'border-[#1A1A1A]/20', 'bg-[#1A1A1A]/[0.02]', 'rounded-md', 'group', 'hover:bg-[#1A1A1A]/5', 'transition-colors')}>
-              <div className={clsx('flex', 'items-center', 'gap-2', 'xl:gap-3')}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-[#1A1A1A]"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
-                <div className={clsx('flex', 'flex-col', 'text-left')}>
-                  <span className={clsx('font-inter', 'text-[9px]', 'xl:text-[10px]', 'font-bold', 'tracking-wider', 'uppercase')}>View in your space</span>
-                  <span className={clsx('font-inter', 'text-[7px]', 'xl:text-[8px]', 'text-[#1A1A1A]/60', 'tracking-wider', 'uppercase')}>AR / 3D Model</span>
-                </div>
-              </div>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={clsx('group-hover:translate-x-1', 'group-hover:-translate-y-1', 'transition-transform')}><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </button>
+
           </div>
         </div>
       </div>
 
-      {/* Footer (Compressed) */}
-      <footer className={clsx('w-full', 'px-4', 'py-2', 'xl:px-6', 'xl:py-3', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-between', 'gap-3', 'border-t', 'border-[#1A1A1A]/10', 'shrink-0', 'mt-auto')}>
-        <div className={clsx('flex', 'items-center', 'gap-4', 'xl:gap-6')}>
-          <span className={clsx('font-playfair', 'font-bold', 'text-lg', 'xl:text-xl', 'tracking-widest')}>MC</span>
-          <div className={clsx('w-px', 'h-5', 'bg-[#1A1A1A]/20')}></div>
-          <span className={clsx('font-inter', 'text-[8px]', 'xl:text-[9px]', 'font-bold', 'tracking-[0.2em]', 'uppercase', 'text-[#1A1A1A]/60')}>For Partners Only</span>
-          <div className={clsx('w-px', 'h-5', 'bg-[#1A1A1A]/20', 'hidden', 'md:block')}></div>
-          <span className={clsx('font-inter', 'text-[8px]', 'xl:text-[9px]', 'font-bold', 'tracking-[0.2em]', 'uppercase', 'text-[#1A1A1A]/60', 'hidden', 'md:block')}>Places that make the night</span>
-        </div>
-        
-        <div className={clsx('flex', 'items-center', 'gap-2', 'group', 'cursor-pointer')}>
-          <span className={clsx('font-inter', 'text-[8px]', 'xl:text-[9px]', 'font-bold', 'tracking-[0.2em]', 'uppercase', 'text-[#1A1A1A]/60')}>Need help?</span>
-          <span className={clsx('font-inter', 'text-[8px]', 'xl:text-[9px]', 'font-bold', 'tracking-[0.2em]', 'uppercase', 'border-b', 'border-[#1A1A1A]/30', 'group-hover:border-[#1A1A1A]', 'transition-colors', 'pb-0.5')}>Get in touch</span>
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={clsx('ml-1', 'group-hover:translate-x-1', 'transition-transform')}><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </div>
-      </footer>
+
     </main>
   );
 }

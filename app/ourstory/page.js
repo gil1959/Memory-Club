@@ -18,7 +18,7 @@ export default function OurStory() {
         
         {/* Section 1: We Make Space */}
         <div style={bgStyle} className="w-full">
-          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'md:gap-34', 'pt-4', 'md:pt-8', 'pb-12', 'md:pb-16', 'transform', 'md:-translate-x-10', 'md:-translate-x-20')}>
+          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'md:gap-34', 'pt-4', 'md:pt-8', 'pb-12', 'md:pb-16')}>
             <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-center', 'md:items-start')} data-aos="fade-right" data-aos-duration="1000">
               <h1 className={clsx('font-anton', 'text-5xl', 'md:text-6xl', 'md:text-[4.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'md:text-left')}>
                 We Make<br/>Space For<br/>Moments<br/>That Stay.
@@ -56,12 +56,6 @@ export default function OurStory() {
                   />
                 </div>
 
-                <div className={clsx('absolute', 'z-30', 'font-satisfy', 'text-lg', 'md:text-xl', 'text-text-dark/90', 'whitespace-nowrap')}
-                     style={{ bottom: "50px", right: "-80px", transform: "rotate(-5deg) translateX(100px) translateY(-20px)" }}>
-                  <div>good times</div>
-                  <div className="ml-6">good people</div>
-                  <div className={clsx('text-right', 'mt-1', 'text-base', 'pr-4')}>♡</div>
-                </div>
               </div>
             </div>
           </section>

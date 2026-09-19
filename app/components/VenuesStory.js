@@ -95,13 +95,13 @@ export default function VenuesStory() {
                   FOLLOW ALONG
                 </span>
                 <span className={clsx('font-inter', 'text-[10px]', 'min-[1050px]:text-xs', 'tracking-widest', 'uppercase', 'text-[#EAE0D5]')}>
-                  @MEMORYCLUB.CO
+                  @YOURMEMORYCLUB
                 </span>
               </div>
               
               <div className={clsx('flex', 'gap-4', 'text-[#EAE0D5]', 'mt-1')}>
                 {/* To update the social media redirect links, modify the 'href' attribute for each anchor tag below. */}
-                <a href="#" aria-label="Instagram" className={clsx('hover:text-white', 'transition-colors')}>
+                <a href="https://instagram.com/yourmemoryclub" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={clsx('hover:text-white', 'transition-colors')}>
                   <svg className={clsx('w-5', 'h-5', 'min-[1050px]:w-6', 'min-[1050px]:h-6')} fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                 </a>
                 <a href="#" aria-label="TikTok" className={clsx('hover:text-white', 'transition-colors')}>
@@ -121,7 +121,6 @@ export default function VenuesStory() {
             </div>
             
             <div className={clsx('relative', 'shrink-0', 'z-10', 'min-[1050px]:-ml-8', 'min-[1050px]:mt-3', 'min-[1050px]:rotate-[2deg]', 'min-[1050px]:translate-x-[-160px]', 'min-[1050px]:scale-150', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
-              <div className={clsx('hidden', 'min-[1050px]:block', 'absolute', '-top-2', 'left-1/2', '-translate-x-1/2', 'w-12', 'h-4', 'bg-tape', 'rotate-[2deg]', 'z-20')} />
               {/* To change the second photo, update the 'src' attribute below. */}
               <img src="/img2section4.png" alt="Photo 2" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
@@ -132,7 +131,6 @@ export default function VenuesStory() {
             </div>
             
             <div className={clsx('relative', 'shrink-0', 'z-30', 'min-[1050px]:-ml-8', 'min-[1050px]:mt-2', 'min-[1050px]:rotate-[-5deg]', 'min-[1050px]:translate-x-[-5px]', 'min-[1050px]:translate-y-[-15px]', 'min-[1050px]:scale-130', 'hover:z-50', 'w-[22%]', 'min-[1050px]:w-auto')}>
-              <div className={clsx('hidden', 'min-[1050px]:block', 'absolute', '-top-1.5', 'left-1/2', '-translate-x-1/2', 'w-10', 'h-4', 'bg-tape', 'rotate-[3deg]', 'z-20')} />
               {/* To change the fourth photo, update the 'src' attribute below. */}
               <img src="/img4section4.png" alt="Photo 4" className={clsx('w-full', 'min-[1050px]:w-[120px]', 'h-auto', 'rounded-sm', 'shadow-md', 'transition-transform', 'duration-300', 'hover:scale-110', 'cursor-pointer')} />
             </div>
@@ -153,32 +151,26 @@ export default function VenuesStory() {
             </div>
           </div>
 
-          <div className={clsx('flex', 'flex-wrap', 'items-center', 'justify-center', 'min-[1050px]:justify-between', 'gap-x-4', 'min-[1050px]:gap-x-3', 'gap-y-6', 'min-[1050px]:gap-y-2', 'pt-4', 'min-[1050px]:pt-10', 'mt-4', 'min-[1050px]:mt-2', 'pb-2')} data-aos="fade-up" data-aos-duration="1000">
-            <span className={clsx('font-inter', 'text-[10px]', 'min-[1050px]:text-xs', 'uppercase', 'tracking-[0.15em]', 'text-[#EAE0D5]/50', 'w-full', 'min-[1050px]:w-auto', 'text-center', 'min-[1050px]:text-left')}>
-              YOU CAN FIND US AT
+          <div className={clsx('flex', 'flex-wrap', 'min-[1050px]:flex-nowrap', 'items-center', 'justify-center', 'min-[1050px]:justify-between', 'gap-x-4', 'min-[1050px]:gap-x-2', 'gap-y-6', 'min-[1050px]:gap-y-2', 'pt-4', 'min-[1050px]:pt-10', 'mt-4', 'min-[1050px]:mt-2', 'pb-2', 'w-full')} data-aos="fade-up" data-aos-duration="1000">
+            <span className={clsx('font-inter', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.15em]', 'text-[#EAE0D5]/50', 'w-full', 'min-[1050px]:w-auto', 'text-center', 'min-[1050px]:text-left', 'whitespace-nowrap')}>
+              FOR THE NIGHTS YOU'D SAVE
             </span>
-            <span className={clsx('font-playfair', 'text-xs', 'min-[1050px]:text-sm', 'uppercase', 'tracking-wider', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')}>
-              THE DRAKE<br/>HOTEL
+            <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
+              LAST-MINUTE PLANS
             </span>
-            <span className={clsx('text-xs', 'min-[1050px]:text-sm', 'uppercase', 'tracking-wider', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')} style={{ fontFamily: "'Josefin Sans', sans-serif" }}>
-              SOHO<br/>HOUSE
+            <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
+              GOOD OUTFITS
             </span>
-            
-            <div className={clsx('flex', 'flex-col', 'items-center', 'justify-center', 'gap-0', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')}>
-              <span className={clsx('font-playfair', 'text-4xl', 'min-[1050px]:text-6xl', 'text-[#EAE0D5]', 'leading-none', 'font-black')}>1</span>
-              <span className={clsx('font-inter', 'text-[5px]', 'min-[1050px]:text-[6px]', 'tracking-[0.25em]', 'uppercase', 'text-[#EAE0D5]', 'leading-none', '-mt-0.5')}>HOTEL</span>
-            </div>
-
-            <span className={clsx('font-anton', 'text-sm', 'min-[1050px]:text-base', 'tracking-widest', 'text-[#EAE0D5]', 'font-light', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')} style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 300 }}>
-              ACE HOTEL
+            <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
+              AFTER DINNER
             </span>
-            <span className={clsx('font-playfair', 'text-xs', 'min-[1050px]:text-sm', 'uppercase', 'tracking-[0.25em]', 'text-[#EAE0D5]', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')}>
-              THE WELL
+            <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
+              THE IN-BETWEEN
             </span>
-            <span className={clsx('text-xs', 'min-[1050px]:text-sm', 'uppercase', 'tracking-wider', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')} style={{ fontFamily: "'Josefin Sans', sans-serif" }}>
-              LOVERSLAND<br/>FESTIVAL
+            <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'text-center', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
+              THINGS YOU DON'T WANT TO FORGET
             </span>
-            <span className={clsx('text-xs', 'min-[1050px]:text-sm', 'uppercase', 'tracking-wider', 'text-[#EAE0D5]', 'transition-all', 'duration-300', 'hover:text-white', 'hover:scale-110', 'cursor-pointer')} style={{ fontFamily: "'Josefin Sans', sans-serif" }}>
+            <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-white', 'text-center', 'transition-all', 'duration-300', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
               &amp; MORE
             </span>
           </div>
@@ -352,7 +344,8 @@ export default function VenuesStory() {
             </div>
           </div>
 
-
+          {/* Right: Dummy element for perfect centering */}
+          <div className={clsx('hidden', 'min-[1050px]:block', 'w-24', 'min-[1050px]:w-58', 'shrink-0', 'pointer-events-none')} aria-hidden="true" />
         </div>
       </div>
     </section>
