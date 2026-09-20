@@ -171,7 +171,7 @@ export default function OurStory() {
         {/* Section 4: Come find us */}
         <div style={bgStyle} className="w-full">
           <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'pt-6', 'pb-12', 'md:pt-10', 'md:pb-14', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-10', 'md:gap-16', 'md:gap-24')}>
-            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-start')} data-aos="fade-right" data-aos-duration="1200">
+            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-center', 'text-center', 'md:items-start', 'md:text-left')} data-aos="fade-right" data-aos-duration="1200">
               <h2 className={clsx('font-anton', 'text-[2.2rem]', 'md:text-[2.8rem]', 'md:text-[3.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark')}>
                 <span className={clsx('block', 'whitespace-nowrap')}>COME FIND US</span>
                 <span className={clsx('block', 'whitespace-nowrap')}>IN GOOD PLACES.</span>

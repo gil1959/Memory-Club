@@ -7,6 +7,15 @@ import Image from 'next/image';
 import clsx from 'clsx';
 
 export default function PartnerWithUsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [venueType, setVenueType] = useState('');
+  const [isLocDropdownOpen, setIsLocDropdownOpen] = useState(false);
+  const [numLocations, setNumLocations] = useState('');
+
+  const venueOptions = ['Bar', 'Restaurant', 'Hotel', 'Club', 'Event Space', 'Cultural Space', 'Other'];
+  const locationOptions = ['1', '2-5', '6-10', '10+'];
+
   const faqs = [
     {
       num: '01',
@@ -241,7 +250,10 @@ export default function PartnerWithUsPage() {
             INTERESTED IN A BOOTH? LET'S TALK.
           </h2>
           
-          <button className="bg-[#A84A3B] text-white px-8 py-4 rounded font-inter text-xs font-semibold tracking-[0.15em] uppercase hover:bg-[#8e3f32] transition-colors flex items-center gap-4 shrink-0 group">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#A84A3B] text-white px-8 py-4 rounded font-inter text-xs font-semibold tracking-[0.15em] uppercase hover:bg-[#8e3f32] transition-colors flex items-center gap-4 shrink-0 group"
+          >
             PARTNER WITH US
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -249,6 +261,159 @@ export default function PartnerWithUsPage() {
           </button>
         </div>
       </main>
+
+      {/* Partner With Us Modal */}
+      {isModalOpen && (
+        <div className={clsx('fixed', 'inset-0', 'z-[9999]', 'flex', 'justify-center', 'items-center', 'bg-black/60', 'backdrop-blur-sm', 'p-4')}>
+          <div className={clsx('relative', 'w-full', 'max-w-[450px]', 'rounded-xl', 'shadow-2xl', 'p-5', 'md:p-6', 'flex', 'flex-col', 'overflow-visible')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+            
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              className={clsx('absolute', 'top-5', 'right-5', 'text-gray-500', 'hover:text-black', 'transition-colors')}
+            >
+              <svg className={clsx('w-5', 'h-5')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            {/* Header */}
+            <div className={clsx('w-full', 'text-center', 'mb-1', 'mt-2')}>
+              <h3 className={clsx('font-anton', 'text-2xl', 'md:text-[28px]', 'uppercase', 'tracking-wide', 'text-[#1A1A1A]')}>PARTNER WITH US</h3>
+              <p className={clsx('font-inter', 'text-xs', 'text-[#1A1A1A]/70', 'mt-1')}>Tell us about your venue and we'll be in touch.</p>
+            </div>
+
+            {/* Divider with heart */}
+            <div className={clsx('flex', 'items-center', 'justify-center', 'gap-3', 'my-3')}>
+              <div className={clsx('w-8', 'h-px', 'bg-[#D27B5E]')}></div>
+              <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              <div className={clsx('w-8', 'h-px', 'bg-[#D27B5E]')}></div>
+            </div>
+
+            {/* Form */}
+            <form className={clsx('flex', 'flex-col', 'gap-2')} onSubmit={(e) => e.preventDefault()}>
+              
+              {/* Venue / Brand Name */}
+              <div className={clsx('flex', 'items-center', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                <input type="text" placeholder="Venue / Brand Name *" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+              </div>
+
+              {/* Contact Name */}
+              <div className={clsx('flex', 'items-center', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <input type="text" placeholder="Contact Name *" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+              </div>
+
+              {/* Email */}
+              <div className={clsx('flex', 'items-center', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <input type="email" placeholder="Email *" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+              </div>
+
+              {/* Phone */}
+              <div className={clsx('flex', 'items-center', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <input type="tel" placeholder="Phone *" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+              </div>
+
+              {/* City + Venue Type (side by side) */}
+              <div className={clsx('grid', 'grid-cols-2', 'gap-2')}>
+                {/* City */}
+                <div className={clsx('flex', 'items-center', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                  <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <input type="text" placeholder="City *" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+                </div>
+
+                {/* Venue Type Dropdown */}
+                <div 
+                  className={clsx('flex', 'items-center', 'gap-2', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'relative', 'cursor-pointer', 'select-none')}
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                >
+                  <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                  <div className={clsx('flex-1', 'font-inter', 'text-sm', 'truncate', venueType ? 'text-[#1A1A1A]' : 'text-[#1A1A1A]/40')}>
+                    {venueType || 'Venue Type *'}
+                  </div>
+                  <svg className={clsx('w-3.5', 'h-3.5', 'text-[#1A1A1A]/40', 'transition-transform', 'shrink-0', isDropdownOpen ? 'rotate-180' : '')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  
+                  {isDropdownOpen && (
+                    <div className={clsx('absolute', 'top-full', 'left-0', 'w-full', 'mt-1', 'bg-[#F2EAE0]', 'border', 'border-[#1A1A1A]/10', 'rounded-lg', 'shadow-xl', 'z-50', 'overflow-hidden')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+                      {venueOptions.map((option) => (
+                        <div 
+                          key={option}
+                          onClick={(e) => { e.stopPropagation(); setVenueType(option); setIsDropdownOpen(false); }}
+                          className={clsx('px-4', 'py-2', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'hover:bg-[#1A1A1A]/10', 'transition-colors')}
+                        >
+                          {option}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Website/Instagram + Number of Locations (side by side) */}
+              <div className={clsx('grid', 'grid-cols-2', 'gap-2')}>
+                {/* Website or Instagram */}
+                <div className={clsx('flex', 'items-center', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                  <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                  <input type="text" placeholder="Website or Instagram" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40')} />
+                </div>
+
+                {/* Number of Locations Dropdown */}
+                <div 
+                  className={clsx('flex', 'items-center', 'gap-2', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'relative', 'cursor-pointer', 'select-none')}
+                  onClick={() => setIsLocDropdownOpen(!isLocDropdownOpen)}
+                >
+                  <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                  <div className={clsx('flex-1', 'font-inter', 'text-sm', 'truncate', numLocations ? 'text-[#1A1A1A]' : 'text-[#1A1A1A]/40')}>
+                    {numLocations || 'Number of Locations'}
+                  </div>
+                  <svg className={clsx('w-3.5', 'h-3.5', 'text-[#1A1A1A]/40', 'transition-transform', 'shrink-0', isLocDropdownOpen ? 'rotate-180' : '')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  
+                  {isLocDropdownOpen && (
+                    <div className={clsx('absolute', 'top-full', 'left-0', 'w-full', 'mt-1', 'bg-[#F2EAE0]', 'border', 'border-[#1A1A1A]/10', 'rounded-lg', 'shadow-xl', 'z-50', 'overflow-hidden')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+                      {locationOptions.map((option) => (
+                        <div 
+                          key={option}
+                          onClick={(e) => { e.stopPropagation(); setNumLocations(option); setIsLocDropdownOpen(false); }}
+                          className={clsx('px-4', 'py-2', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'hover:bg-[#1A1A1A]/10', 'transition-colors')}
+                        >
+                          {option}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Why are you interested? Textarea */}
+              <div className={clsx('flex', 'gap-3', 'px-3', 'py-2', 'bg-transparent', 'border', 'border-[#1A1A1A]/20', 'rounded-lg', 'focus-within:border-[#1A1A1A]/50', 'transition-colors')}>
+                <svg className={clsx('w-4', 'h-4', 'text-[#1A1A1A]/50', 'mt-0.5', 'shrink-0')} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                <textarea rows={2} placeholder="Why are you interested? *" className={clsx('w-full', 'bg-transparent', 'outline-none', 'font-inter', 'text-sm', 'text-[#1A1A1A]', 'placeholder:text-[#1A1A1A]/40', 'resize-none')}></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <button 
+                type="submit"
+                onClick={() => setIsModalOpen(false)}
+                className={clsx('w-full', 'bg-[#1A1A1A]', 'text-white', 'py-3', 'mt-1', 'rounded-lg', 'font-inter', 'text-xs', 'font-bold', 'tracking-widest', 'uppercase', 'hover:bg-black', 'transition-colors')}
+              >
+                SEND INQUIRY
+              </button>
+
+              {/* Cancel Link */}
+              <button 
+                type="button"
+                onClick={() => setIsModalOpen(false)}
+                className={clsx('w-full', 'text-center', 'mt-1', 'mb-1', 'font-inter', 'text-xs', 'font-semibold', 'underline', 'text-[#1A1A1A]/60', 'hover:text-black', 'transition-colors')}
+              >
+                Cancel
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>

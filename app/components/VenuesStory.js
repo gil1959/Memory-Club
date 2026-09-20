@@ -292,9 +292,9 @@ export default function VenuesStory() {
           }}
         />
 
-        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'py-2', 'min-[1050px]:py-1', 'flex', 'flex-col', 'min-[1050px]:flex-row', 'items-center', 'justify-center', 'relative', 'z-10', 'gap-4', 'sm:gap-8', 'min-[1050px]:gap-20', 'min-[1050px]:gap-32', 'min-[1050px]:min-h-[180px]')}>
+        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'pt-6', 'pb-0', 'min-[1050px]:py-1', 'flex', 'flex-col-reverse', 'min-[1050px]:flex-row', 'items-center', 'justify-center', 'relative', 'z-10', 'gap-4', 'sm:gap-8', 'min-[1050px]:gap-20', 'min-[1050px]:gap-32', 'min-[1050px]:min-h-[180px]')}>
           {/* Left: Polaroid photo with tape */}
-          <div className={clsx('shrink-0', 'min-[1050px]:translate-y-3', 'relative', 'z-[-1]', '-rotate-3', 'hover:rotate-0', 'transition-transform', 'duration-300')}>
+          <div className={clsx('shrink-0', 'translate-y-2', 'min-[1050px]:translate-y-3', 'relative', 'z-[-1]', '-rotate-3', 'hover:rotate-0', 'transition-transform', 'duration-300')}>
             <div className={clsx('w-24', 'min-[1050px]:w-58', 'drop-shadow-md')}>
               <Image
                 src="/img1section5.png"

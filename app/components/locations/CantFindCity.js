@@ -12,7 +12,7 @@ export default function CantFindCity() {
   const venueOptions = ['Bar', 'Hotel', 'Restaurant', 'Event Space', 'Other'];
 
   return (
-    <section className={clsx('w-full', 'bg-cream', 'py-0', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20', isModalOpen ? 'z-[9999]' : 'z-10')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className={clsx('w-full', 'bg-cream', 'pt-0', 'pb-12', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20', isModalOpen ? 'z-[9999]' : 'z-10')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className={clsx('max-w-[1200px]', 'mx-auto', 'px-6', 'lg:px-12', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'gap-12', 'md:gap-20')}>
         
         {/* Left: Map Piece */}
@@ -29,12 +29,12 @@ export default function CantFindCity() {
         </div>
 
         {/* Right: Text Content */}
-        <div className={clsx('w-full', 'md:w-[55%]', 'flex', 'flex-col', 'gap-3')}>
+        <div className={clsx('w-full', 'md:w-[55%]', 'flex', 'flex-col', 'items-center', 'text-center', 'md:items-start', 'md:text-left', 'gap-3')}>
           <h2 className={clsx('font-anton', 'text-4xl', 'md:text-5xl', 'uppercase', 'text-[#1A1A1A]', 'leading-none', 'tracking-wide')}>
             CAN'T FIND YOUR CITY?
           </h2>
           
-          <div className={clsx('flex', 'flex-col', 'w-fit')}>
+          <div className={clsx('flex', 'flex-col', 'items-center', 'md:items-start', 'w-fit')}>
             <p className={clsx('font-caveat', 'text-3xl', 'md:text-4xl', 'text-[#3D3530]', 'mb-1', 'pl-1')}>
               More locations are coming.
             </p>

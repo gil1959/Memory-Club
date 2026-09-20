@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function LocationsHero() {
   return (
-    <section className={clsx('relative', 'w-full', 'bg-cream-dark', 'overflow-hidden', 'pt-24', 'md:pt-20', 'pb-0', 'md:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className={clsx('relative', 'w-full', 'bg-cream-dark', 'overflow-hidden', 'pt-32', 'md:pt-20', 'pb-0', 'md:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
       
       <div className={clsx('w-full', 'flex', 'flex-col', 'lg:flex-row', 'items-center', 'lg:items-stretch', 'gap-10', 'lg:gap-0')}>
         
         {/* Left Content */}
-        <div className={clsx('w-full', 'lg:w-[45%]', 'flex', 'flex-col', 'gap-4', 'lg:gap-6', 'relative', 'z-10', 'px-6', 'lg:pl-[max(2.5rem,calc((100vw-1280px)/2+2.5rem))]', 'lg:pr-8', 'lg:py-16')}>
-          <div className={clsx('font-caveat', 'text-2xl', 'md:text-3xl', 'text-[#3D3530]', '-rotate-6', 'flex', 'flex-col', 'gap-1', 'mb-2', '-translate-y-6')}>
+        <div className={clsx('w-full', 'lg:w-[45%]', 'flex', 'flex-col', 'items-center', 'text-center', 'lg:items-start', 'lg:text-left', 'gap-4', 'lg:gap-6', 'relative', 'z-10', 'px-6', 'lg:pl-[max(2.5rem,calc((100vw-1280px)/2+2.5rem))]', 'lg:pr-8', 'lg:py-16')}>
+          <div className={clsx('font-caveat', 'text-2xl', 'md:text-3xl', 'text-[#3D3530]', '-rotate-6', 'flex', 'flex-col', 'items-center', 'lg:items-start', 'gap-1', 'mb-2', '-translate-y-6')}>
             <span className="leading-tight">Great moments are</span>
             <span className={clsx('leading-tight', 'flex', 'items-center', 'gap-2', '-rotate-3', '-translate-x-2')}>
               closer than you think.

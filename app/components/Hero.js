@@ -3,17 +3,17 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className={clsx('relative', 'min-[1050px]:min-h-[100svh]', 'min-[1050px]:h-screen', 'bg-cream', 'overflow-x-clip', 'pt-28', 'min-[1050px]:pt-20', 'pb-10', 'min-[1050px]:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+    <section className={clsx('relative', 'min-[1050px]:min-h-[100svh]', 'min-[1050px]:h-screen', 'bg-cream', 'overflow-hidden', 'pt-20', 'min-[1050px]:pt-20', 'pb-4', 'min-[1050px]:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
       <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'h-full', 'flex', 'min-[1050px]:items-center')}>
-        <div className={clsx('w-full', 'relative', 'mt-10', 'min-[1050px]:mt-0')}>
+        <div className={clsx('w-full', 'h-full', 'flex', 'flex-col', 'items-center', 'min-[1050px]:block', 'relative', 'mt-4', 'min-[1050px]:mt-0', 'justify-start')}>
 
-          <div className={clsx('flex', 'flex-col', 'items-center', 'min-[1050px]:items-start', 'gap-5', 'z-10', 'relative', 'min-[1050px]:max-w-[560px]', 'pl-0')} data-aos="fade-right" data-aos-duration="1000">
-            <h1 className={clsx('font-anton', 'text-5xl', 'min-[1050px]:text-7xl', 'min-[1050px]:text-[6.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'min-[1050px]:text-left')}>
+          <div className={clsx('flex', 'flex-col', 'items-center', 'min-[1050px]:items-start', 'gap-3', 'min-[1050px]:gap-5', 'z-10', 'relative', 'min-[1050px]:max-w-[560px]', 'pl-0')} data-aos="fade-right" data-aos-duration="1000">
+            <h1 className={clsx('font-anton', 'text-4xl', 'min-[1050px]:text-7xl', 'min-[1050px]:text-[6.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'min-[1050px]:text-left')}>
               Memories
               <br />
               Made Real.
             </h1>
-            <p className={clsx('font-inter', 'text-[15px]', 'min-[1050px]:text-[16px]', 'text-text-dark/80', 'max-w-[420px]', 'leading-relaxed', 'mt-1', 'text-center', 'min-[1050px]:text-left')}>
+            <p className={clsx('font-inter', 'text-[13px]', 'min-[1050px]:text-[16px]', 'text-text-dark/80', 'max-w-[420px]', 'leading-relaxed', 'mt-1', 'text-center', 'min-[1050px]:text-left')}>
               Memory Club places handcrafted photo booths in selected bars,
               restaurants, hotels, clubs, and similar venues. Each booth
               captures the real, unfiltered moments that make nights out
@@ -24,13 +24,13 @@ export default function Hero() {
               <a
                 href="/locations"
                 className="btn-find-locations"
-                style={{ padding: "14px 28px", fontSize: "0.85rem" }}
+                style={{ padding: "10px 22px", fontSize: "0.75rem" }}
               >
                 Find Locations
               </a>
               <a
                 href="/ourstory"
-                className={clsx('our-story-btn', 'inline-flex', 'items-center', 'gap-3', 'px-4', 'py-2.5', 'text-[13px]', 'font-inter', 'font-semibold', 'tracking-wider', 'uppercase', 'text-text-dark', 'hover:gap-5', 'transition-all', 'duration-300')}
+                className={clsx('our-story-btn', 'inline-flex', 'items-center', 'gap-3', 'px-4', 'py-2.5', 'text-[11px]', 'min-[1050px]:text-[13px]', 'font-inter', 'font-semibold', 'tracking-wider', 'uppercase', 'text-text-dark', 'hover:gap-5', 'transition-all', 'duration-300')}
               >
                 <span className="our-story-text">Our Story</span>
                 <span className="our-story-arrow">→</span>
@@ -38,14 +38,14 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className={clsx('relative', 'min-[1050px]:absolute', 'z-[51]', 'mt-4', 'min-[1050px]:mt-0', 'min-[1050px]:top-[-100px]', 'min-[1050px]:left-[47%]', 'w-fit', 'mx-auto', 'min-[1050px]:mx-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-            <div className="relative" style={{ transform: "scale(var(--hero-scale, 1))", transformOrigin: "left top", marginLeft: "var(--hero-ml, 0)", marginBottom: "var(--hero-mb, 0)" }}>
+          <div className={clsx('relative', 'min-[1050px]:absolute', 'z-[51]', 'mt-6', 'min-[1050px]:mt-0', 'min-[1050px]:top-[-100px]', 'min-[1050px]:left-[47%]', 'w-full', 'flex', 'justify-center', 'min-[1050px]:w-fit', 'min-[1050px]:block', 'min-[1050px]:mx-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+            <div className={clsx('relative', 'w-[340px]', 'min-[1050px]:w-auto')} style={{ transform: "scale(var(--hero-scale, 1))", transformOrigin: "top center", marginLeft: "var(--hero-ml, 0)", marginBottom: "var(--hero-mb, 0)" }}>
               <style>{`
                 @media (max-width: 767px) {
                   .relative[style*="--hero-scale"] {
-                    --hero-scale: 0.55;
+                    --hero-scale: 0.45;
                     --hero-ml: 0%;
-                    --hero-mb: -230px;
+                    --hero-mb: -220px;
                   }
                 }
               `}</style>
