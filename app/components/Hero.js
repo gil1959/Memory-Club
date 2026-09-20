@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className={clsx('relative', 'min-[1050px]:min-h-[100svh]', 'min-[1050px]:h-screen', 'bg-cream', 'overflow-hidden', 'pt-20', 'min-[1050px]:pt-20', 'pb-4', 'min-[1050px]:pb-0')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
       <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'h-full', 'flex', 'min-[1050px]:items-center')}>
-        <div className={clsx('w-full', 'h-full', 'flex', 'flex-col', 'items-center', 'min-[1050px]:block', 'relative', 'mt-4', 'min-[1050px]:mt-0', 'justify-start')}>
+        <div className={clsx('w-full', 'h-full', 'min-[1050px]:h-auto', 'flex', 'flex-col', 'items-center', 'min-[1050px]:block', 'relative', 'mt-4', 'min-[1050px]:mt-0', 'justify-start')}>
 
           <div className={clsx('flex', 'flex-col', 'items-center', 'min-[1050px]:items-start', 'gap-3', 'min-[1050px]:gap-5', 'z-10', 'relative', 'min-[1050px]:max-w-[560px]', 'pl-0')} data-aos="fade-right" data-aos-duration="1000">
             <h1 className={clsx('font-anton', 'text-4xl', 'min-[1050px]:text-7xl', 'min-[1050px]:text-[6.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'min-[1050px]:text-left')}>
@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <div className={clsx('relative', 'min-[1050px]:absolute', 'z-[51]', 'mt-6', 'min-[1050px]:mt-0', 'min-[1050px]:top-[-100px]', 'min-[1050px]:left-[47%]', 'w-full', 'flex', 'justify-center', 'min-[1050px]:w-fit', 'min-[1050px]:block', 'min-[1050px]:mx-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-            <div className={clsx('relative', 'w-[340px]', 'min-[1050px]:w-auto')} style={{ transform: "scale(var(--hero-scale, 1))", transformOrigin: "top center", marginLeft: "var(--hero-ml, 0)", marginBottom: "var(--hero-mb, 0)" }}>
+            <div className={clsx('relative', 'w-[340px]', 'min-[1050px]:w-auto', 'origin-top', 'min-[1050px]:origin-top-left')} style={{ transform: "scale(var(--hero-scale, 1))", marginLeft: "var(--hero-ml, 0)", marginBottom: "var(--hero-mb, 0)" }}>
               <style>{`
                 @media (max-width: 767px) {
                   .relative[style*="--hero-scale"] {
