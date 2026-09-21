@@ -12,12 +12,12 @@ export default function CantFindCity() {
   const venueOptions = ['Bar', 'Hotel', 'Restaurant', 'Event Space', 'Other'];
 
   return (
-    <section className={clsx('w-full', 'bg-cream', 'pt-0', 'pb-12', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20', isModalOpen ? 'z-[9999]' : 'z-10')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
-      <div className={clsx('max-w-[1200px]', 'mx-auto', 'px-6', 'lg:px-12', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'gap-12', 'md:gap-20')}>
+    <section className={clsx('w-full', 'bg-cream', 'pt-8', 'pb-4', 'md:pb-12', 'md:py-0', 'relative', 'overflow-hidden', 'border-t', 'border-[#1A1A1A]/20', isModalOpen ? 'z-[9999]' : 'z-10')} style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className={clsx('max-w-[1200px]', 'mx-auto', 'px-6', 'lg:px-12', 'flex', 'flex-col-reverse', 'md:flex-row', 'items-center', 'gap-4', 'md:gap-20')}>
         
-        {/* Left: Map Piece */}
-        <div className={clsx('w-full', 'md:w-[45%]', 'relative', 'flex', 'justify-center', 'items-center', '-my-10', 'md:-my-20', 'lg:-my-15')}>
-           <div className={clsx('relative', 'w-full', 'h-[300px]', 'md:h-[450px]', 'scale-125', 'translate-x-0', 'translate-y-0')}>
+        {/* Left: Map Piece (Bottom on mobile) */}
+        <div className={clsx('w-full', 'md:w-[45%]', 'relative', 'flex', 'justify-center', 'items-center', 'mt-4', '-mb-10', 'md:-my-20', 'lg:-my-15')}>
+           <div className={clsx('relative', 'w-full', 'h-[220px]', 'md:h-[450px]', 'scale-110', 'md:scale-125', 'translate-x-0', 'translate-y-0')}>
               <Image 
                 src="/maps2locations.png" 
                 alt="Map Background" 
@@ -28,28 +28,28 @@ export default function CantFindCity() {
            </div>
         </div>
 
-        {/* Right: Text Content */}
-        <div className={clsx('w-full', 'md:w-[55%]', 'flex', 'flex-col', 'items-center', 'text-center', 'md:items-start', 'md:text-left', 'gap-3')}>
+        {/* Right: Text Content (Top on mobile) */}
+        <div className={clsx('w-full', 'md:w-[55%]', 'flex', 'flex-col', 'items-center', 'text-center', 'md:items-start', 'md:text-left', 'gap-2', 'md:gap-3')}>
           <h2 className={clsx('font-anton', 'text-4xl', 'md:text-5xl', 'uppercase', 'text-[#1A1A1A]', 'leading-none', 'tracking-wide')}>
             CAN'T FIND YOUR CITY?
           </h2>
           
           <div className={clsx('flex', 'flex-col', 'items-center', 'md:items-start', 'w-fit')}>
-            <p className={clsx('font-caveat', 'text-3xl', 'md:text-4xl', 'text-[#3D3530]', 'mb-1', 'pl-1')}>
+            <p className={clsx('font-caveat', 'text-2xl', 'md:text-4xl', 'text-[#3D3530]', 'mb-0', 'md:mb-1', 'pl-1')}>
               More locations are coming.
             </p>
-            <div className={clsx('relative', 'w-48', 'h-3', '-mt-1', 'ml-2')}>
+            <div className={clsx('relative', 'w-32', 'md:w-48', 'h-2', 'md:h-3', 'mt-0', 'md:-mt-1', 'ml-2')}>
               <Image src="/line2.png" alt="line" fill className={clsx('object-contain', 'object-left')} />
             </div>
           </div>
           
-          <p className={clsx('font-inter', 'text-sm', 'text-[#1A1A1A]/80', 'leading-relaxed', 'max-w-[450px]', 'mt-4', 'mb-2')}>
-            We're always growing and would love your input.<br/>Suggest a city or venue and help us bring the<br/>Memory Club experience to more places.
+          <p className={clsx('font-inter', 'text-[11px]', 'md:text-sm', 'text-[#1A1A1A]/80', 'leading-relaxed', 'max-w-[450px]', 'mt-2', 'md:mt-4', 'mb-2')}>
+            We're always growing and would love your input.<br className="hidden md:block"/>Suggest a city or venue and help us bring the<br className="hidden md:block"/>Memory Club experience to more places.
           </p>
           
           <button 
             onClick={() => setIsModalOpen(true)}
-            className={clsx('w-fit', 'bg-[#1A1A1A]', 'text-[#EAE0D5]', 'px-8', 'py-3.5', 'mt-2', 'rounded-md', 'font-inter', 'text-xs', 'font-bold', 'tracking-widest', 'uppercase', 'hover:bg-[#2C2520]', 'transition-colors')}
+            className={clsx('w-fit', 'bg-[#1A1A1A]', 'text-[#EAE0D5]', 'px-6', 'md:px-8', 'py-3', 'md:py-3.5', 'mt-1', 'md:mt-2', 'rounded-md', 'font-inter', 'text-[10px]', 'md:text-xs', 'font-bold', 'tracking-widest', 'uppercase', 'hover:bg-[#2C2520]', 'transition-colors')}
           >
             SUGGEST A LOCATION
           </button>
