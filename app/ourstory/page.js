@@ -18,13 +18,13 @@ export default function OurStory() {
         
         {/* Section 1: We Make Space */}
         <div style={bgStyle} className="w-full">
-          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col', 'md:flex-row', 'items-center', 'justify-center', 'gap-4', 'md:gap-34', 'pt-2', 'md:pt-8', 'pb-6', 'md:pb-16')}>
-            <div className={clsx('w-full', 'md:w-auto', 'flex', 'flex-col', 'items-center', 'md:items-start')} data-aos="fade-right" data-aos-duration="1000">
-              <h1 className={clsx('font-anton', 'text-[32px]', 'md:text-6xl', 'md:text-[4.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-center', 'md:text-left')}>
+          <section className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'flex', 'flex-col-reverse', 'md:flex-row', 'items-center', 'justify-center', 'gap-4', 'md:gap-34', 'pt-2', 'md:pt-8', 'pb-6', 'md:pb-16')}>
+            <div className={clsx('w-auto', 'md:w-auto', 'flex', 'flex-col', 'items-start', 'md:items-start', 'pl-6', 'md:pl-0')} data-aos="fade-right" data-aos-duration="1000">
+              <h1 className={clsx('font-anton', 'text-[32px]', 'md:text-6xl', 'md:text-[4.5rem]', 'uppercase', 'leading-[1.05]', 'tracking-wider', 'text-text-dark', 'text-left', 'md:text-left')}>
                 We Make<br/>Space For<br/>Moments<br/>That Stay.
               </h1>
-              <div className={clsx('w-10', 'h-1', 'bg-[#d05c45]', 'mt-2', 'md:mt-4', 'mb-3', 'md:mb-5', 'mx-auto', 'md:mx-0')}></div>
-              <p className={clsx('font-inter', 'text-[11px]', 'md:text-[14.5px]', 'text-text-dark/85', 'leading-[1.5]', 'md:leading-[1.8]', 'tracking-wide', 'text-center', 'md:text-left')}>
+              <div className={clsx('w-10', 'h-1', 'bg-[#d05c45]', 'mt-2', 'md:mt-4', 'mb-3', 'md:mb-5', 'mx-0', 'md:mx-0')}></div>
+              <p className={clsx('font-inter', 'text-[11px]', 'md:text-[14.5px]', 'text-text-dark/85', 'leading-[1.5]', 'md:leading-[1.8]', 'tracking-wide', 'text-left', 'md:text-left')}>
                 In a world that moves fast, we believe<br/>
                 the best moments deserve more<br/>
                 than a screen. Memory Club brings<br/>
@@ -34,8 +34,8 @@ export default function OurStory() {
               </p>
             </div>
             
-            <div className={clsx('w-full', 'md:w-auto', 'relative', 'mt-4', 'md:mt-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-              <div className={clsx('relative', 'w-[160px]', 'md:w-[260px]', 'md:w-[300px]', 'mx-auto', 'md:mx-0')}>
+            <div className={clsx('w-full', 'md:w-auto', 'relative', 'mt-0', 'md:mt-0')} data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+              <div className={clsx('relative', 'w-[200px]', 'md:w-[260px]', 'md:w-[300px]', 'mx-auto', 'md:mx-0')}>
                 <Image 
                   src="/img1ourstory.png" 
                   alt="Girls hugging" 
@@ -45,8 +45,8 @@ export default function OurStory() {
                   style={{ transform: "scale(1) translateX(0px) translateY(-10px) rotate(0deg)" }}
                 />
                 
-                <div className={clsx('absolute', 'z-20', 'transition-transform', 'duration-300', 'w-[60px]', 'md:w-[100px]')}
-                     style={{ bottom: "0px", right: "-10px", transform: "scale(1.1) translateX(0px) translateY(-40px) rotate(10deg)" }}>
+                <div className={clsx('absolute', 'z-20', 'transition-transform', 'duration-300', 'w-[70px]', 'md:w-[100px]')}
+                     style={{ bottom: "0px", right: "-20px", transform: "scale(1.1) translateX(0px) translateY(-40px) rotate(10deg)" }}>
                   <Image 
                     src="/img2ourstory.png" 
                     alt="Photo strip" 

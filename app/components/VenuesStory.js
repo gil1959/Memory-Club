@@ -59,7 +59,7 @@ export default function VenuesStory() {
       `}</style>
       <div 
         id="bg-dark-container"
-        className={clsx('relative', 'w-full', 'pb-16', 'min-[1050px]:pb-90')}
+        className={clsx('relative', 'w-full', 'h-[100svh]', 'min-[1050px]:h-auto', 'min-[1050px]:pb-90')}
         style={{
           backgroundImage: "url('/bg3.png')",
           backgroundSize: "100% 100%",
@@ -75,7 +75,118 @@ export default function VenuesStory() {
             <path d="M0,4 L20,3 L50,5 L80,4 L120,5 L150,3 L200,4 L250,5 L280,3 L320,4 L400,5 L450,3 L500,4 L550,5 L600,3 L650,4 L700,5 L750,3 L800,4 L850,5 L900,3 L950,4 L1000,4" fill="none" stroke="#EAE0D5" strokeWidth="0.5" strokeOpacity="0.3" vectorEffect="non-scaling-stroke" />
           </svg>
         </div>
-        <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'pt-2', 'min-[1050px]:pt-4')}>
+
+        {/* --- MOBILE VIEW --- */}
+        <div className={clsx('flex', 'flex-col', 'h-full', 'max-w-7xl', 'mx-auto', 'px-6', 'pt-2', 'min-[1050px]:hidden')}>
+          <div className={clsx('flex', 'flex-col', '-mt-2', 'relative', 'z-10')}>
+            <div className={clsx('flex', 'flex-col', 'justify-between', 'gap-2', 'w-full', 'mb-2', 'mt-2')}>
+              <div className={clsx('flex', 'flex-col', 'items-center', 'gap-1', 'text-center')}>
+                <h2 className={clsx('font-anton', 'text-[1.7rem]', 'uppercase', 'tracking-wide', 'text-[#EAE0D5]', 'leading-[0.9]', 'pb-0.5')}>
+                  FOUND IN GOOD PLACES
+                </h2>
+                <p className={clsx('font-playfair', 'italic', 'text-[14px]', 'font-semibold', 'text-[#EAE0D5]/60', 'tracking-wide', 'pb-0', 'mt-0.5')}>
+                  Real people. Real moments. Real venues.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className={clsx('w-full', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'gap-y-1', 'flex-1', 'mt-1', 'px-2', 'min-h-0')} data-aos="zoom-in" data-aos-duration="1200">
+            <div className="flex w-full justify-center gap-2 items-center flex-1 min-h-0">
+              <div className="h-full relative rotate-[-2deg] z-10"><img src="/img1section4.png" alt="Photo 1" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[3deg] z-10 mt-1"><img src="/img2section4.png" alt="Photo 2" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+            </div>
+            <div className="flex w-full justify-center gap-2 items-center flex-1 min-h-0">
+              <div className="h-full relative rotate-[-4deg] z-20"><img src="/img3section4.png" alt="Photo 3" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[2deg] z-10 mt-1"><img src="/img4section4.png" alt="Photo 4" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+            </div>
+            <div className="flex w-full justify-center gap-1 items-center flex-1 min-h-0">
+              <div className="h-full relative rotate-[5deg] z-10 mt-1"><img src="/img5section4.png" alt="Photo 5" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[-3deg] z-20"><img src="/img6section4.png" alt="Photo 6" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[2deg] z-10 mt-0.5"><img src="/img7section4.png" alt="Photo 7" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+            </div>
+          </div>
+
+          <div className={clsx('w-full', 'flex', 'flex-col', 'mt-auto', 'pb-4')} data-aos="fade-up" data-aos-duration="1000">
+            <div className={clsx('flex', 'items-center', 'justify-center', 'gap-3', 'w-full', 'mb-3')}>
+              <div className={clsx('h-[1px]', 'bg-[#EAE0D5]/30', 'flex-1', 'max-w-[80px]')}></div>
+              <span className={clsx('font-inter', 'text-[8px]', 'uppercase', 'tracking-[0.15em]', 'text-[#EAE0D5]/50')}>
+                YOU CAN FIND US AT
+              </span>
+              <div className={clsx('h-[1px]', 'bg-[#EAE0D5]/30', 'flex-1', 'max-w-[80px]')}></div>
+            </div>
+            <div className={clsx('grid', 'grid-cols-3', 'gap-y-4', 'gap-x-1', 'text-center', 'mb-3')}>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>THE DRAKE<br/>HOTEL</span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>SOHO<br/>HOUSE</span>
+              <span className={clsx('font-playfair', 'text-[20px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'flex-col', 'items-center', 'justify-center', 'leading-none', 'font-normal')}>1<br/><span className={clsx('text-[6px]', 'tracking-[0.2em]', 'mt-1', 'text-[#EAE0D5]/80')}>HOTEL</span></span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>ACE HOTEL</span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>THE WELL</span>
+              <span className={clsx('font-playfair', 'text-[8px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>LOVERSLAND<br/>FESTIVAL</span>
+            </div>
+            <div className={clsx('w-full', 'text-center')}>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]/70')}>&amp; MORE</span>
+            </div>
+          </div>
+        </div>
+
+        {/* --- DESKTOP VIEW --- */}
+        <div className="hidden min-[1050px]:block">
+          {/* --- MOBILE VIEW --- */}
+        <div className={clsx('flex', 'flex-col', 'justify-center', 'max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:hidden')}>
+          <div className={clsx('flex', 'flex-col', '-mt-2', 'relative', 'z-10')}>
+            <div className={clsx('flex', 'flex-col', 'justify-between', 'gap-2', 'w-full', 'mb-2', 'mt-2')}>
+              <div className={clsx('flex', 'flex-col', 'items-center', 'gap-1', 'text-center')}>
+                <h2 className={clsx('font-anton', 'text-[1.7rem]', 'uppercase', 'tracking-wide', 'text-[#EAE0D5]', 'leading-[0.9]', 'pb-0.5')}>
+                  FOUND IN GOOD PLACES
+                </h2>
+                <p className={clsx('font-playfair', 'italic', 'text-[14px]', 'font-semibold', 'text-[#EAE0D5]/60', 'tracking-wide', 'pb-0', 'mt-0.5')}>
+                  Real people. Real moments. Real venues.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className={clsx('w-full', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'gap-y-3', 'mt-4', 'mb-6', 'px-2')} data-aos="zoom-in" data-aos-duration="1200">
+            <div className="flex w-full justify-center gap-3 items-center h-[15vh]">
+              <div className="h-full relative rotate-[-2deg] z-10"><img src="/img1section4.png" alt="Photo 1" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[3deg] z-10 mt-1"><img src="/img2section4.png" alt="Photo 2" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+            </div>
+            <div className="flex w-full justify-center gap-3 items-center h-[15vh]">
+              <div className="h-full relative rotate-[-4deg] z-20"><img src="/img3section4.png" alt="Photo 3" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[2deg] z-10 mt-1"><img src="/img4section4.png" alt="Photo 4" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+            </div>
+            <div className="flex w-full justify-center gap-2 items-center h-[13vh]">
+              <div className="h-full relative rotate-[5deg] z-10 mt-1"><img src="/img5section4.png" alt="Photo 5" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[-3deg] z-20"><img src="/img6section4.png" alt="Photo 6" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+              <div className="h-full relative rotate-[2deg] z-10 mt-0.5"><img src="/img7section4.png" alt="Photo 7" className="h-full w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" /></div>
+            </div>
+          </div>
+
+          <div className={clsx('w-full', 'flex', 'flex-col', 'pb-4')} data-aos="fade-up" data-aos-duration="1000">
+            <div className={clsx('flex', 'items-center', 'justify-center', 'gap-3', 'w-full', 'mb-3')}>
+              <div className={clsx('h-[1px]', 'bg-[#EAE0D5]/30', 'flex-1', 'max-w-[80px]')}></div>
+              <span className={clsx('font-inter', 'text-[8px]', 'uppercase', 'tracking-[0.15em]', 'text-[#EAE0D5]/50')}>
+                YOU CAN FIND US AT
+              </span>
+              <div className={clsx('h-[1px]', 'bg-[#EAE0D5]/30', 'flex-1', 'max-w-[80px]')}></div>
+            </div>
+            <div className={clsx('grid', 'grid-cols-3', 'gap-y-4', 'gap-x-1', 'text-center', 'mb-3')}>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>THE DRAKE<br/>HOTEL</span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>SOHO<br/>HOUSE</span>
+              <span className={clsx('font-playfair', 'text-[20px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'flex-col', 'items-center', 'justify-center', 'leading-none', 'font-normal')}>1<br/><span className={clsx('text-[6px]', 'tracking-[0.2em]', 'mt-1', 'text-[#EAE0D5]/80')}>HOTEL</span></span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>ACE HOTEL</span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>THE WELL</span>
+              <span className={clsx('font-playfair', 'text-[8px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>LOVERSLAND<br/>FESTIVAL</span>
+            </div>
+            <div className={clsx('w-full', 'text-center')}>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]/70')}>&amp; MORE</span>
+            </div>
+          </div>
+        </div>
+
+        {/* --- DESKTOP VIEW --- */}
+        <div className="hidden min-[1050px]:block">
+          <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'pt-2', 'min-[1050px]:pt-4')}>
         
         <div className={clsx('flex', 'flex-col', '-mt-2', 'min-[1050px]:-mt-4', 'relative', 'z-10')}>
           
@@ -173,6 +284,8 @@ export default function VenuesStory() {
             <span className={clsx('font-playfair', 'text-[10px]', 'min-[1050px]:text-[11px]', 'uppercase', 'tracking-[0.1em]', 'text-white', 'text-center', 'transition-all', 'duration-300', 'hover:scale-110', 'cursor-pointer', 'whitespace-nowrap')}>
               &amp; MORE
             </span>
+          </div>
+          </div>
           </div>
         </div>
       </div>
