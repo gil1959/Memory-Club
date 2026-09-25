@@ -149,10 +149,10 @@ export default function Hero() {
             <div
               className={clsx(
                 'absolute',
-                '-top-6',
-                'min-[400px]:-top-12',
-                'right-[-60px]',
-                'min-[400px]:right-[-50px]',
+                '-top-4',
+                'min-[400px]:-top-10',
+                'right-[-76px]',
+                'min-[400px]:right-[-66px]',
                 'font-satisfy',
                 'font-normal',
                 'text-base',
@@ -335,7 +335,7 @@ export default function Hero() {
               </div>
 
               <div
-                className={clsx('absolute', 'top-6', 'right-[-180px]', 'font-satisfy', 'font-normal', 'text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
+                className={clsx('absolute', 'top-8', 'right-[-200px]', 'font-satisfy', 'font-normal', 'text-xl', 'text-text-dark/70', '-rotate-12', 'z-20')}
                 style={{ wordSpacing: "8px" }}
               >
                 good times
