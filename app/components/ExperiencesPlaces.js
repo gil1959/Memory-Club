@@ -113,7 +113,7 @@ export default function ExperiencesPlaces() {
         'relative', 'w-full',
         'bg-[url(/bg2.png)]',
         'bg-no-repeat',
-        'bg-[length:100%_135%]', 'md:bg-[length:100%_125%]',
+        'bg-[length:100%_125%]', 'sm:bg-[length:100%_135%]', 'md:bg-[length:100%_145%]', 'lg:bg-[length:100%_135%]', 'xl:bg-[length:100%_125%]',
         'bg-bottom'
       )}
     >
@@ -123,7 +123,7 @@ export default function ExperiencesPlaces() {
 
       <div className={clsx('w-full', 'border-t', 'border-text-dark/20')} />
 
-      <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'pt-2', 'md:pt-4', 'pb-30', 'md:pb-4', 'relative', 'flex', 'flex-col', 'justify-center')}>
+      <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'pt-2', 'md:pt-4', 'pb-16', 'sm:pb-28', 'md:pb-36', 'lg:pb-24', 'xl:pb-4', 'relative', 'flex', 'flex-col', 'justify-center')}>
 
         <div className={clsx('relative', 'w-full', 'md:-left-[30px]')}>
           
@@ -146,8 +146,8 @@ export default function ExperiencesPlaces() {
 
           <div className={clsx('grid', 'grid-cols-1', 'min-[878px]:grid-cols-[1fr_auto_1fr]', 'gap-4', 'min-[878px]:gap-0')}>
 
-          <div className={clsx('flex', 'flex-col', 'min-[878px]:flex-row', 'gap-2', 'min-[878px]:gap-6', 'items-center', 'min-[878px]:items-start', 'justify-center')} data-aos="fade-up" data-aos-duration="1000">
-            <div className={clsx('relative', 'shrink-0', 'w-[140px]', 'min-[878px]:w-[300px]', 'min-[878px]:-mt-10', 'min-[878px]:ml-4')}>
+          <div className={clsx('flex', 'flex-col', 'min-[878px]:flex-row', 'gap-3', 'min-[878px]:gap-6', 'items-center', 'min-[878px]:items-start', 'justify-center')} data-aos="fade-up" data-aos-duration="1000">
+            <div className={clsx('relative', 'shrink-0', 'w-[180px]', 'min-[878px]:w-[300px]', 'min-[878px]:-mt-10', 'min-[878px]:ml-4')}>
               {/* To change the classic strip photo, update the 'src' attribute below. */}
               <Image
                 src="/img1section2.png"
@@ -158,24 +158,24 @@ export default function ExperiencesPlaces() {
               />
             </div>
 
-            <div className={clsx('flex', 'flex-col', 'items-center', 'min-[878px]:items-start', 'text-center', 'min-[878px]:text-left', 'gap-1', 'pt-1', 'max-w-[260px]', 'min-[878px]:max-w-[240px]', 'min-[878px]:-ml-8')}>
-              <h3 className={clsx('font-anton', 'text-xl', 'min-[878px]:text-2xl', 'uppercase', 'tracking-wide', 'text-text-dark')}>
+            <div className={clsx('flex', 'flex-col', 'items-center', 'min-[878px]:items-start', 'text-center', 'min-[878px]:text-left', 'gap-1.5', 'pt-1', 'max-w-[320px]', 'min-[878px]:max-w-[240px]', 'min-[878px]:-ml-8')}>
+              <h3 className={clsx('font-anton', 'text-[26px]', 'min-[878px]:text-2xl', 'uppercase', 'tracking-wide', 'text-text-dark')}>
                 Classic Strip
               </h3>
-              <p className={clsx('font-inter', 'text-sm', 'min-[878px]:text-xs', 'text-text-dark/70', 'leading-snug')}>
+              <p className={clsx('font-inter', 'text-base', 'min-[878px]:text-xs', 'text-text-dark/70', 'leading-relaxed')}>
                 Timeless black &amp; white photo strips. Iconic. Unfiltered. Always in style.
               </p>
-              <ul className={clsx('flex', 'flex-row', 'min-[878px]:flex-col', 'items-center', 'min-[878px]:items-start', 'justify-center', 'flex-wrap', 'gap-2', 'min-[878px]:gap-3', 'mt-1', 'min-[878px]:mt-2')}>
-                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[13px]', 'md:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
-                  <IconCamera className={clsx('w-4', 'h-4', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
+              <ul className={clsx('flex', 'flex-row', 'min-[878px]:flex-col', 'items-center', 'min-[878px]:items-start', 'justify-center', 'flex-wrap', 'gap-3', 'min-[878px]:gap-3', 'mt-1', 'min-[878px]:mt-2')}>
+                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[14px]', 'min-[878px]:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
+                  <IconCamera className={clsx('w-[18px]', 'h-[18px]', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
                   4 Poses
                 </li>
-                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[13px]', 'md:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
-                  <IconRuler className={clsx('w-4', 'h-4', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
+                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[14px]', 'min-[878px]:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
+                  <IconRuler className={clsx('w-[18px]', 'h-[18px]', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
                   2x6&quot; Strip
                 </li>
-                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[13px]', 'md:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
-                  <IconCircleHalf className={clsx('w-4', 'h-4', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
+                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[14px]', 'min-[878px]:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
+                  <IconCircleHalf className={clsx('w-[18px]', 'h-[18px]', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
                   B &amp; W
                 </li>
               </ul>
@@ -186,8 +186,8 @@ export default function ExperiencesPlaces() {
             <div className={clsx('w-px', 'h-full', 'bg-text-dark/15')} />
           </div>
 
-          <div className={clsx('flex', 'flex-col', 'min-[878px]:flex-row', 'gap-2', 'min-[878px]:gap-2', 'items-center', 'min-[878px]:items-start', 'justify-center', 'min-[878px]:-ml-10')} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div className={clsx('relative', 'shrink-0', 'w-[140px]', 'min-[878px]:w-[340px]', 'min-[878px]:-mt-10', 'min-[878px]:ml-0')}>
+          <div className={clsx('flex', 'flex-col', 'min-[878px]:flex-row', 'gap-3', 'min-[878px]:gap-2', 'items-center', 'min-[878px]:items-start', 'justify-center', 'min-[878px]:-ml-10')} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div className={clsx('relative', 'shrink-0', 'w-[180px]', 'min-[878px]:w-[340px]', 'min-[878px]:-mt-10', 'min-[878px]:ml-0')}>
               {/* To change the polaroid experience photo, update the 'src' attribute below. */}
               <Image
                 src="/img2section2.png"
@@ -198,24 +198,24 @@ export default function ExperiencesPlaces() {
               />
             </div>
 
-            <div className={clsx('flex', 'flex-col', 'items-center', 'min-[878px]:items-start', 'text-center', 'min-[878px]:text-left', 'gap-1', 'pt-1', 'max-w-[260px]', 'min-[878px]:max-w-[240px]', 'min-[878px]:ml-4')}>
-              <h3 className={clsx('font-anton', 'text-xl', 'min-[878px]:text-2xl', 'uppercase', 'tracking-wide', 'text-text-dark')}>
+            <div className={clsx('flex', 'flex-col', 'items-center', 'min-[878px]:items-start', 'text-center', 'min-[878px]:text-left', 'gap-1.5', 'pt-1', 'max-w-[320px]', 'min-[878px]:max-w-[240px]', 'min-[878px]:ml-4')}>
+              <h3 className={clsx('font-anton', 'text-[26px]', 'min-[878px]:text-2xl', 'uppercase', 'tracking-wide', 'text-text-dark')}>
                 Polaroid Experience
               </h3>
-              <p className={clsx('font-inter', 'text-sm', 'min-[878px]:text-xs', 'text-text-dark/70', 'leading-snug')}>
+              <p className={clsx('font-inter', 'text-base', 'min-[878px]:text-xs', 'text-text-dark/70', 'leading-relaxed')}>
                 Classic instant prints. Warm tones. Real moments you can hold.
               </p>
-              <ul className={clsx('flex', 'flex-row', 'min-[878px]:flex-col', 'items-center', 'min-[878px]:items-start', 'justify-center', 'flex-wrap', 'gap-2', 'min-[878px]:gap-3', 'mt-1', 'min-[878px]:mt-2')}>
-                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[13px]', 'md:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
-                  <IconFilm className={clsx('w-4', 'h-4', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
+              <ul className={clsx('flex', 'flex-row', 'min-[878px]:flex-col', 'items-center', 'min-[878px]:items-start', 'justify-center', 'flex-wrap', 'gap-3', 'min-[878px]:gap-3', 'mt-1', 'min-[878px]:mt-2')}>
+                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[14px]', 'min-[878px]:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
+                  <IconFilm className={clsx('w-[18px]', 'h-[18px]', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
                   Polaroid Film
                 </li>
-                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[13px]', 'md:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
-                  <IconPalette className={clsx('w-4', 'h-4', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
+                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[14px]', 'min-[878px]:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
+                  <IconPalette className={clsx('w-[18px]', 'h-[18px]', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
                   Vibrant Tones
                 </li>
-                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[13px]', 'md:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
-                  <IconStar className={clsx('w-4', 'h-4', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
+                <li className={clsx('flex', 'items-center', 'gap-1.5', 'min-[878px]:gap-3', 'text-[14px]', 'min-[878px]:text-[13px]', 'font-inter', 'font-semibold', 'uppercase', 'tracking-wider', 'text-text-dark/80')}>
+                  <IconStar className={clsx('w-[18px]', 'h-[18px]', 'min-[878px]:w-5', 'min-[878px]:h-5', 'text-text-dark')} />
                   Collectible
                 </li>
               </ul>
@@ -225,7 +225,7 @@ export default function ExperiencesPlaces() {
         </div> 
       </div>
 
-      <div id="places" className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'pt-6', 'pb-8', 'md:pt-4', 'md:pb-12')}>
+      <div id="places" className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'md:px-10', 'pt-4', 'sm:pt-10', 'md:pt-14', 'lg:pt-8', 'xl:pt-4', 'pb-4', 'md:pb-12')}>
         <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-5', 'gap-4', 'md:gap-10', 'items-center')}>
 
           <div className={clsx('md:col-span-1', 'flex', 'flex-col', 'items-center', 'md:items-start', 'gap-2', 'md:gap-4')}>

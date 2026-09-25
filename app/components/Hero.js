@@ -116,6 +116,8 @@ export default function Hero() {
         >
           <div className={clsx(
             'relative',
+            '-left-4',
+            'min-[400px]:-left-8',
             'w-[65vw]',
             'min-[400px]:w-[75vw]',
             'min-[500px]:w-[65vw]',

@@ -78,10 +78,10 @@ export default function VenuesStory() {
 
         {/* --- MOBILE VIEW --- */}
         <div className={clsx('flex', 'flex-col', 'h-full', 'max-w-7xl', 'mx-auto', 'px-6', 'pt-2', 'min-[1050px]:hidden')}>
-          <div className={clsx('flex', 'flex-col', '-mt-2', 'relative', 'z-10')}>
+          <div className={clsx('flex', 'flex-col', 'mt-4', 'relative', 'z-10')}>
             <div className={clsx('flex', 'flex-col', 'justify-between', 'gap-2', 'w-full', 'mb-2', 'mt-2')}>
               <div className={clsx('flex', 'flex-col', 'items-center', 'gap-1', 'text-center')}>
-                <h2 className={clsx('font-anton', 'text-[1.7rem]', 'uppercase', 'tracking-wide', 'text-[#EAE0D5]', 'leading-[0.9]', 'pb-0.5')}>
+                <h2 className={clsx('font-anton', 'text-[1.4rem]', 'uppercase', 'tracking-wide', 'text-[#EAE0D5]', 'leading-[0.9]', 'pb-0.5')}>
                   FOUND IN GOOD PLACES
                 </h2>
                 <p className={clsx('font-playfair', 'italic', 'text-[14px]', 'font-semibold', 'text-[#EAE0D5]/60', 'tracking-wide', 'pb-0', 'mt-0.5')}>
@@ -107,24 +107,33 @@ export default function VenuesStory() {
             </div>
           </div>
 
-          <div className={clsx('w-full', 'flex', 'flex-col', 'mt-auto', 'pb-4')} data-aos="fade-up" data-aos-duration="1000">
+          <div className={clsx('w-full', 'flex', 'flex-col', 'mt-auto', 'pb-4', 'px-2')} data-aos="fade-up" data-aos-duration="1000">
             <div className={clsx('flex', 'items-center', 'justify-center', 'gap-3', 'w-full', 'mb-3')}>
               <div className={clsx('h-[1px]', 'bg-[#EAE0D5]/30', 'flex-1', 'max-w-[80px]')}></div>
               <span className={clsx('font-inter', 'text-[8px]', 'uppercase', 'tracking-[0.15em]', 'text-[#EAE0D5]/50')}>
-                YOU CAN FIND US AT
+                FOR THE NIGHTS YOU'D SAVE
               </span>
               <div className={clsx('h-[1px]', 'bg-[#EAE0D5]/30', 'flex-1', 'max-w-[80px]')}></div>
             </div>
-            <div className={clsx('grid', 'grid-cols-3', 'gap-y-4', 'gap-x-1', 'text-center', 'mb-3')}>
-              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>THE DRAKE<br/>HOTEL</span>
-              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>SOHO<br/>HOUSE</span>
-              <span className={clsx('font-playfair', 'text-[20px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'flex-col', 'items-center', 'justify-center', 'leading-none', 'font-normal')}>1<br/><span className={clsx('text-[6px]', 'tracking-[0.2em]', 'mt-1', 'text-[#EAE0D5]/80')}>HOTEL</span></span>
-              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>ACE HOTEL</span>
-              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>THE WELL</span>
-              <span className={clsx('font-playfair', 'text-[8px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]', 'flex', 'items-center', 'justify-center', 'leading-relaxed')}>LOVERSLAND<br/>FESTIVAL</span>
+            <div className={clsx('flex', 'flex-wrap', 'items-center', 'justify-center', 'gap-x-3', 'gap-y-3', 'text-center', 'mb-2')}>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'transition-all', 'duration-300')}>
+                LAST-MINUTE PLANS
+              </span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'transition-all', 'duration-300')}>
+                GOOD OUTFITS
+              </span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'transition-all', 'duration-300')}>
+                AFTER DINNER
+              </span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'transition-all', 'duration-300')}>
+                THE IN-BETWEEN
+              </span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-[0.1em]', 'text-[#EAE0D5]', 'w-full', 'transition-all', 'duration-300')}>
+                THINGS YOU DON'T WANT TO FORGET
+              </span>
             </div>
             <div className={clsx('w-full', 'text-center')}>
-              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-widest', 'text-[#EAE0D5]/70')}>&amp; MORE</span>
+              <span className={clsx('font-playfair', 'text-[9px]', 'uppercase', 'tracking-[0.1em]', 'text-white')}>&amp; MORE</span>
             </div>
           </div>
         </div>
@@ -291,28 +300,28 @@ export default function VenuesStory() {
       </div>
     </div>
 
-    <div className={clsx('max-w-7xl', 'mx-auto', 'px-6', 'min-[1050px]:px-10', 'relative', 'z-20', 'mt-4', 'min-[1050px]:-mt-87')}>
+    <div className={clsx('max-w-7xl', 'mx-auto', 'px-0', 'md:px-3', 'min-[1050px]:px-10', 'relative', 'z-20', 'mt-4', 'min-[1050px]:-mt-87')}>
 
         {/* FIND A MEMORY CLUB NEAR YOU - 4 City Cards */}
         <div id="locations" className={clsx('mb-8', 'min-[1050px]:mb-14', 'scroll-mt-24')}>
           
           {/* Section Header with Horizontal Rule */}
-          <div className={clsx('flex', 'flex-col', 'md:flex-row', 'md:items-center', 'justify-between', 'gap-1', 'md:gap-3', 'mb-4', 'lg:mb-8')} data-aos="fade-up" data-aos-duration="1000">
+          <div className={clsx('flex', 'flex-col', 'md:flex-row', 'md:items-center', 'justify-between', 'gap-1', 'md:gap-3', 'mb-4', 'lg:mb-8', 'px-4', 'md:px-0')} data-aos="fade-up" data-aos-duration="1000">
             <div className={clsx('flex', 'flex-col', 'md:flex-row', 'items-center', 'gap-2', 'md:gap-4', 'flex-1')}>
               <h2
-                className={clsx('font-playfair', 'text-lg', 'sm:text-xl', 'lg:text-2xl', 'font-bold', 'uppercase', 'tracking-tight', 'text-[#1A1A1A]', 'underline', 'underline-offset-4', 'text-center', 'md:text-left')}
+                className={clsx('font-playfair', 'text-[22px]', 'sm:text-xl', 'lg:text-2xl', 'font-bold', 'uppercase', 'tracking-tight', 'text-[#1A1A1A]', 'underline', 'underline-offset-4', 'text-center', 'md:text-left')}
               >
                 Find a Memory Club Near You
               </h2>
               <div className={clsx('hidden', 'md:block', 'flex-grow', 'border-t', 'border-[#1A1A1A]/30')} />
             </div>
-            <span className={clsx('font-inter', 'text-[10px]', 'lg:text-xs', 'uppercase', 'tracking-[0.2em]', 'text-[#1A1A1A]/60', 'font-semibold', 'shrink-0', 'text-center', 'lg:text-left', 'w-full', 'lg:w-auto')}>
+            <span className={clsx('font-inter', 'text-[12px]', 'lg:text-xs', 'uppercase', 'tracking-[0.2em]', 'text-[#1A1A1A]/60', 'font-semibold', 'shrink-0', 'text-center', 'lg:text-left', 'w-full', 'lg:w-auto')}>
               More Cities Coming Soon.
             </span>
           </div>
 
           {/* 4 Vintage Postcard Cards Grid */}
-          <div className={clsx('grid', 'grid-cols-2', 'lg:grid-cols-4', 'gap-3', 'lg:gap-5')}>
+          <div className={clsx('grid', 'grid-cols-2', 'lg:grid-cols-4', 'gap-1', 'md:gap-2', 'lg:gap-5', 'px-1', 'md:px-0')}>
             {cities.map((city, index) => (
               <div
                 key={city.id}
@@ -342,13 +351,13 @@ export default function VenuesStory() {
                 {/* 3. City Name & Region text overlay */}
                 <div className={clsx('absolute', 'inset-0', 'z-15', 'flex', 'flex-col', 'items-center', 'justify-center', '-translate-y-4', 'md:-translate-y-15', 'pointer-events-none')}>
                   <h3 
-                    className={clsx('font-anton', 'text-xl', 'sm:text-4xl', 'lg:text-3xl', 'xl:text-4xl', 'uppercase', 'tracking-wider', 'leading-none', 'text-center', 'drop-shadow-lg')}
+                    className={clsx('font-anton', 'text-2xl', 'sm:text-4xl', 'lg:text-3xl', 'xl:text-4xl', 'uppercase', 'tracking-wider', 'leading-none', 'text-center', 'drop-shadow-lg')}
                     style={{ color: city.accentColor, textShadow: '0 1px 3px rgba(255,255,255,0.4)' }}
                   >
                     {city.name}
                   </h3>
                   <span 
-                    className={clsx('font-inter', 'text-[9px]', 'sm:text-sm', 'lg:text-xs', 'xl:text-sm', 'uppercase', 'tracking-[0.2em]', 'mt-1', 'text-center', 'drop-shadow-md')}
+                    className={clsx('font-inter', 'text-[11px]', 'sm:text-sm', 'lg:text-xs', 'xl:text-sm', 'uppercase', 'tracking-[0.2em]', 'mt-1', 'text-center', 'drop-shadow-md')}
                     style={{ color: city.accentColor, textShadow: '0 1px 2px rgba(255,255,255,0.4)' }}
                   >
                     {city.region}
@@ -359,13 +368,13 @@ export default function VenuesStory() {
                 <img
                   src="/mc.png"
                   alt="MC Stamp"
-                  className={clsx('absolute', 'top-2', 'right-2', 'md:top-4', 'md:right-4', 'w-8', 'h-8', 'md:w-11', 'md:h-11', 'lg:w-12', 'lg:h-12', 'shrink-0', 'rotate-[15deg]', 'opacity-60', 'group-hover:opacity-90', 'transition-opacity', 'pointer-events-none', 'z-20')}
+                  className={clsx('absolute', 'top-2', 'right-2', 'md:top-4', 'md:right-4', 'w-[38px]', 'h-[38px]', 'md:w-11', 'md:h-11', 'lg:w-12', 'lg:h-12', 'shrink-0', 'rotate-[15deg]', 'opacity-60', 'group-hover:opacity-90', 'transition-opacity', 'pointer-events-none', 'z-20')}
                 />
 
                 {/* 5. View Locations link at bottom */}
                 <div className={clsx('absolute', 'bottom-[6%]', 'left-0', 'w-full', 'flex', 'items-center', 'justify-center', 'z-20', 'pointer-events-none')}>
                   <span 
-                    className={clsx('text-[8px]', 'sm:text-[12px]', 'lg:text-[13px]', 'tracking-[0.05em]', 'md:tracking-[0.1em]', 'uppercase', 'text-[#2C2520]', 'group-hover:text-black', 'flex', 'items-center', 'gap-1', 'md:gap-1.5', 'transition-colors')} 
+                    className={clsx('text-[9px]', 'sm:text-[12px]', 'lg:text-[13px]', 'tracking-[0.05em]', 'md:tracking-[0.1em]', 'uppercase', 'text-[#2C2520]', 'group-hover:text-black', 'flex', 'items-center', 'gap-1', 'md:gap-1.5', 'transition-colors')} 
                     style={{ fontFamily: "'Courier New', Courier, monospace", fontWeight: 600 }}
                   >
                     VIEW LOCATIONS
